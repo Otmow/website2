@@ -18,8 +18,15 @@ function GradientFallback() {
   );
 }
 
-export function WarpBackgroundBlue({ speed = 0.8 }: { speed?: number }) {
-  const enabled = useEnableHeavyFx();
+export function WarpBackgroundBlue({
+  speed = 0.8,
+  allowMobile = false,
+}: {
+  speed?: number;
+  /** Run the shader on phones too (used for the signature hero animation). */
+  allowMobile?: boolean;
+}) {
+  const enabled = useEnableHeavyFx({ allowMobile });
   if (!enabled) return <GradientFallback />;
   return (
     <Suspense fallback={<GradientFallback />}>

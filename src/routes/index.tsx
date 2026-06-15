@@ -72,7 +72,7 @@ function HomePageBlue() {
 
       {/* ============ HERO — Warp shader ============ */}
       <section className="relative min-h-screen overflow-hidden">
-        <WarpBackgroundBlue speed={0.8} />
+        <WarpBackgroundBlue speed={0.8} allowMobile />
         <div className="absolute inset-0 bg-gradient-to-b from-[#040a1c]/40 via-[#040a1c]/30 to-[#060d1f]" />
 
         <div className="relative z-10 flex min-h-screen items-center px-5 pt-24 md:px-8">

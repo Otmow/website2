@@ -38,9 +38,16 @@ owns scheduling.
 
 ### Capability gate
 
-`useEnableHeavyFx()` (`src/hooks/use-enable-heavy-fx.ts`) is the single source of
-truth: false during SSR/first paint, then true only when not mobile, no
-reduced-motion preference, and `hardwareConcurrency >= 4`.
+`useEnableHeavyFx(opts?)` (`src/hooks/use-enable-heavy-fx.ts`) is the single source
+of truth: false during SSR/first paint, then true when no reduced-motion
+preference and `hardwareConcurrency >= 4`. By default it is also false on mobile.
+
+- Heavy effects (three.js `DottedSurfaceBlue`, WebGL2 `GridShader`) use the default
+  gate — **off on mobile**.
+- The signature hero `WarpBackgroundBlue` is rendered with `allowMobile` (passes
+  `{ allowMobile: true }`), so the lightest shader runs on phones too. Reduced-motion
+  still forces the gradient fallback there.
+- The footer `WarpBackgroundBlue` keeps the default gate (gradient on mobile).
 
 ### LazyVideo media contract
 
