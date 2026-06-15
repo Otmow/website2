@@ -250,15 +250,26 @@ export function GridImpl({ pixelRatio }: { pixelRatio?: number }) {
     gl.enableVertexAttribArray(0);
     gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
 
+    // Free the buffers already allocated above before bailing on a shader error,
+    // so the failure paths don't leak GPU objects for the page lifetime.
+    const freeBuffers = () => {
+      gl.deleteVertexArray(vao);
+      gl.deleteBuffer(vbo);
+      vao = null;
+      vbo = null;
+    };
+
     const { shader: vs, log: vsLog } = safeCompile(gl, gl.VERTEX_SHADER, VERT_SRC);
     if (!vs) {
       drawError(gl, vsLog);
+      freeBuffers();
       return;
     }
     const { shader: fs, log: fsLog } = safeCompile(gl, gl.FRAGMENT_SHADER, SHADER_SRC);
     if (!fs) {
       drawError(gl, fsLog);
       gl.deleteShader(vs);
+      freeBuffers();
       return;
     }
     const linked = safeLink(gl, vs, fs);
@@ -266,6 +277,7 @@ export function GridImpl({ pixelRatio }: { pixelRatio?: number }) {
     gl.deleteShader(fs);
     if (!linked.program) {
       drawError(gl, linked.log);
+      freeBuffers();
       return;
     }
     program = linked.program;

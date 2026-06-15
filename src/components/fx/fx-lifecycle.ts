@@ -8,7 +8,10 @@
  */
 export function runManagedRaf(target: Element, frame: (now: number) => void): () => void {
   let rafId = 0;
-  let onScreen = true;
+  // Start paused: the IntersectionObserver fires its initial callback right
+  // after observe(), so an on-screen target starts within a frame, while an
+  // off-screen one never renders a wasted frame.
+  let onScreen = false;
   let visible = typeof document === "undefined" ? true : !document.hidden;
   let running = false;
 
