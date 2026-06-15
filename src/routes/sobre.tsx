@@ -45,11 +45,13 @@ const media = [
   },
   {
     source: "Mercado financeiro",
-    title: "Fechamento de mercado — impacto na Bolsa de Valores (IBOVESPA), valorização do Real e perspectivas para o mercado brasileiro",
+    title:
+      "Fechamento de mercado — impacto na Bolsa de Valores (IBOVESPA), valorização do Real e perspectivas para o mercado brasileiro",
   },
   {
     source: "Mercado financeiro",
-    title: "Abertura de mercado — Ata do COPOM, balanços corporativos e cenário macroeconômico no radar",
+    title:
+      "Abertura de mercado — Ata do COPOM, balanços corporativos e cenário macroeconômico no radar",
   },
 ];
 
@@ -76,9 +78,9 @@ function SobrePageBlue() {
           </Reveal>
           <Reveal delay={220}>
             <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg">
-              Com tecnologia própria, agilidade e segurança, viabilizamos capital para
-              empresas que vendem para o governo, transformando notas fiscais em liquidez
-              imediata — sem exigência de garantias reais e com análise rápida.
+              Com tecnologia própria, agilidade e segurança, viabilizamos capital para empresas que
+              vendem para o governo, transformando notas fiscais em liquidez imediata — sem
+              exigência de garantias reais e com análise rápida.
             </p>
           </Reveal>
         </div>
@@ -93,8 +95,8 @@ function SobrePageBlue() {
                 Nossa trajetória de crescimento
               </h2>
               <p className="mt-5 text-base text-slate-300">
-                Cada conquista representa um passo estratégico na missão de transformar o
-                acesso a crédito para fornecedores do setor público.
+                Cada conquista representa um passo estratégico na missão de transformar o acesso a
+                crédito para fornecedores do setor público.
               </p>
             </div>
           </Reveal>
@@ -154,9 +156,9 @@ function SobrePageBlue() {
                   R$ <CountUp end={1.3} decimals={1} duration={2400} /> tri
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-slate-200">
-                  O setor público brasileiro é o maior comprador da América Latina,
-                  movimentando mais de R$ 1,3 trilhão por ano em contratações de obras,
-                  serviços e fornecimento de bens.
+                  O setor público brasileiro é o maior comprador da América Latina, movimentando
+                  mais de R$ 1,3 trilhão por ano em contratações de obras, serviços e fornecimento
+                  de bens.
                 </p>
               </div>
             </Reveal>
@@ -166,8 +168,8 @@ function SobrePageBlue() {
                   +<CountUp end={160} duration={2400} />
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-slate-200">
-                  Já analisamos mais de 160 órgãos públicos em todo o Brasil, reunindo
-                  dados estratégicos sobre licitações, contratos e prazos de pagamento.
+                  Já analisamos mais de 160 órgãos públicos em todo o Brasil, reunindo dados
+                  estratégicos sobre licitações, contratos e prazos de pagamento.
                 </p>
               </div>
             </Reveal>
@@ -187,8 +189,8 @@ function SobrePageBlue() {
                 Reconhecimento que reforça a confiança
               </h2>
               <p className="mt-5 text-base text-slate-300">
-                Nossas conquistas e iniciativas têm ganhado destaque em veículos de
-                comunicação e canais especializados do mercado financeiro.
+                Nossas conquistas e iniciativas têm ganhado destaque em veículos de comunicação e
+                canais especializados do mercado financeiro.
               </p>
             </div>
           </Reveal>

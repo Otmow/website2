@@ -87,8 +87,8 @@ function FaqPageBlue() {
           </Reveal>
           <Reveal delay={200}>
             <p className="mx-auto mt-6 max-w-xl text-base text-slate-300">
-              Respostas simples e diretas para as questões mais comuns. Nosso objetivo é
-              tornar sua experiência mais prática, transparente e sem complicações.
+              Respostas simples e diretas para as questões mais comuns. Nosso objetivo é tornar sua
+              experiência mais prática, transparente e sem complicações.
             </p>
           </Reveal>
         </div>

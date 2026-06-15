@@ -35,8 +35,8 @@ export function SimuladorAntecipacao() {
               Simule sua antecipação
             </h2>
             <p className="mt-5 text-base text-slate-300 md:text-lg">
-              Ajuste o valor do recebível e o prazo em semanas para ver quanto você
-              recebe — com liberação em até 48 horas.
+              Ajuste o valor do recebível e o prazo em semanas para ver quanto você recebe — com
+              liberação em até 48 horas.
             </p>
           </div>
         </Reveal>
@@ -91,9 +91,7 @@ export function SimuladorAntecipacao() {
             <div className="flex flex-col justify-center gap-5 bg-[#060d1f] p-8 md:p-10">
               <div className="flex items-center justify-between">
                 <span className="text-sm text-slate-400">Valor bruto</span>
-                <span className="text-base font-medium text-slate-200">
-                  {brl.format(amount)}
-                </span>
+                <span className="text-base font-medium text-slate-200">{brl.format(amount)}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-slate-400">Deságio</span>
@@ -125,8 +123,8 @@ export function SimuladorAntecipacao() {
         </Reveal>
 
         <p className="mx-auto mt-6 max-w-2xl text-center text-xs text-slate-500">
-          Simulação ilustrativa. Os valores finais são definidos após a análise de
-          crédito e da operação.
+          Simulação ilustrativa. Os valores finais são definidos após a análise de crédito e da
+          operação.
         </p>
       </div>
     </section>

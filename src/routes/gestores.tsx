@@ -75,9 +75,9 @@ function GestoresPageBlue() {
               </Reveal>
               <Reveal delay={240}>
                 <p className="mt-7 max-w-xl text-base leading-relaxed text-slate-100/90 md:text-lg">
-                  Distribua ativos de renda fixa lastreados em recebíveis públicos, com
-                  liquidez controlada. Uma estrutura de alto nível para investidores que
-                  buscam segurança e rentabilidade consistente.
+                  Distribua ativos de renda fixa lastreados em recebíveis públicos, com liquidez
+                  controlada. Uma estrutura de alto nível para investidores que buscam segurança e
+                  rentabilidade consistente.
                 </p>
               </Reveal>
               <Reveal delay={340}>
@@ -121,7 +121,9 @@ function GestoresPageBlue() {
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-xs font-medium text-white">Liquidação Recebível #8492</p>
-                        <p className="mt-0.5 text-[11px] text-slate-400">Ente público · Pgto confirmado</p>
+                        <p className="mt-0.5 text-[11px] text-slate-400">
+                          Ente público · Pgto confirmado
+                        </p>
                       </div>
                       <p className="font-display text-sm font-bold text-[#4EB7FF]">+ R$ 142.500</p>
                     </div>
@@ -136,8 +138,12 @@ function GestoresPageBlue() {
                     </div>
                   </div>
                   <div className="rounded-xl border border-[#3674EF]/30 bg-[#3674EF]/15 p-4">
-                    <p className="text-[11px] uppercase tracking-wider text-[#7cc6ff]">Já captados</p>
-                    <p className="mt-1 font-display text-2xl font-bold text-white">+ R$ 20 milhões</p>
+                    <p className="text-[11px] uppercase tracking-wider text-[#7cc6ff]">
+                      Já captados
+                    </p>
+                    <p className="mt-1 font-display text-2xl font-bold text-white">
+                      + R$ 20 milhões
+                    </p>
                   </div>
                 </div>
               </div>
@@ -156,8 +162,8 @@ function GestoresPageBlue() {
                 <span className="text-[#4EB7FF]">Nossa excelência em ativos estruturados.</span>
               </h2>
               <p className="mt-5 text-base text-slate-300">
-                Proporcionamos a inteligência de mercado e o suporte operacional para que
-                sua única preocupação seja o crescimento da sua rede.
+                Proporcionamos a inteligência de mercado e o suporte operacional para que sua única
+                preocupação seja o crescimento da sua rede.
               </p>
             </div>
           </Reveal>

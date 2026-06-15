@@ -42,9 +42,9 @@ function ParceirosPageBlue() {
           </Reveal>
           <Reveal delay={240}>
             <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg">
-              Nosso programa é destinado a profissionais que atuam junto a fornecedores
-              do setor público e que desejam indicar clientes para a antecipação de
-              recebíveis. Simples, transparente e com total suporte do nosso time.
+              Nosso programa é destinado a profissionais que atuam junto a fornecedores do setor
+              público e que desejam indicar clientes para a antecipação de recebíveis. Simples,
+              transparente e com total suporte do nosso time.
             </p>
           </Reveal>
           <Reveal delay={360}>
@@ -70,8 +70,8 @@ function ParceirosPageBlue() {
                 Quem pode se tornar parceiro?
               </h2>
               <p className="mt-5 text-base text-slate-300">
-                Qualquer profissional ou empresa que possua relacionamento com
-                fornecedores do setor público.
+                Qualquer profissional ou empresa que possua relacionamento com fornecedores do setor
+                público.
               </p>
             </div>
           </Reveal>
@@ -109,9 +109,9 @@ function ParceirosPageBlue() {
                   Como o programa beneficia o seu negócio
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-slate-300 md:text-lg">
-                  Nosso programa de parceria oferece uma oportunidade única para quem
-                  deseja expandir seus serviços financeiros. Ao se juntar a nós, você terá
-                  acesso a soluções inovadoras e suporte contínuo.
+                  Nosso programa de parceria oferece uma oportunidade única para quem deseja
+                  expandir seus serviços financeiros. Ao se juntar a nós, você terá acesso a
+                  soluções inovadoras e suporte contínuo.
                 </p>
                 <div className="mt-8 rounded-2xl border border-[#3674EF]/30 bg-[#3674EF]/5 p-7">
                   <HandCoins className="size-8 text-[#4EB7FF]" />
@@ -119,10 +119,9 @@ function ParceirosPageBlue() {
                     Comissão por operação concluída
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                    Indique empresas que prestam serviços ao setor público e receba
-                    comissões por cada operação concluída. O valor varia conforme o
-                    deságio da operação formalizada e liquidada — e tudo é formalizado em
-                    contrato.
+                    Indique empresas que prestam serviços ao setor público e receba comissões por
+                    cada operação concluída. O valor varia conforme o deságio da operação
+                    formalizada e liquidada — e tudo é formalizado em contrato.
                   </p>
                 </div>
               </div>
@@ -172,9 +171,9 @@ function ParceirosPageBlue() {
             </span>
             <blockquote className="mt-8 font-display text-balance text-xl font-medium leading-relaxed text-white md:text-2xl">
               "A Ótmow tem sido uma parceira estratégica, contribuindo diretamente para o
-              fortalecimento da nossa relação comercial e oferecendo suporte financeiro
-              que nos auxilia a manter o giro da atividade sempre que necessário.
-              Seguimos à disposição para fortalecer ainda mais essa relação."
+              fortalecimento da nossa relação comercial e oferecendo suporte financeiro que nos
+              auxilia a manter o giro da atividade sempre que necessário. Seguimos à disposição para
+              fortalecer ainda mais essa relação."
             </blockquote>
             <p className="mt-8 text-sm font-semibold text-[#4EB7FF]">Parceiro Ótmow</p>
           </Reveal>

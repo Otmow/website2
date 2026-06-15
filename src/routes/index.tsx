@@ -93,9 +93,9 @@ function HomePageBlue() {
 
             <Reveal delay={240}>
               <p className="mx-auto mt-7 max-w-2xl text-balance text-lg font-light leading-relaxed text-slate-100/90 md:text-xl">
-                Antecipe seus recebíveis de contratos públicos com agilidade,
-                tecnologia e total segurança. Receba em até 48 horas — sem
-                garantias reais, sem burocracia e sem surpresas.
+                Antecipe seus recebíveis de contratos públicos com agilidade, tecnologia e total
+                segurança. Receba em até 48 horas — sem garantias reais, sem burocracia e sem
+                surpresas.
               </p>
             </Reveal>
 
@@ -127,8 +127,12 @@ function HomePageBlue() {
                   { k: "100%", v: "digital e seguro" },
                 ].map((s) => (
                   <div key={s.v} className="glass rounded-xl px-4 py-4 md:px-6">
-                    <p className="font-display text-xl font-bold text-[#4EB7FF] md:text-3xl">{s.k}</p>
-                    <p className="mt-1 text-[11px] leading-snug text-slate-200/80 md:text-xs">{s.v}</p>
+                    <p className="font-display text-xl font-bold text-[#4EB7FF] md:text-3xl">
+                      {s.k}
+                    </p>
+                    <p className="mt-1 text-[11px] leading-snug text-slate-200/80 md:text-xs">
+                      {s.v}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -154,11 +158,10 @@ function HomePageBlue() {
                   Transforme sua relação com o setor público
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-slate-300 md:text-lg">
-                  Não precisa esperar o governo te pagar. Os prazos de pagamento variam
-                  de <strong className="text-white">30 a 180 dias</strong> e estão sujeitos
-                  a atrasos. Ao antecipar os recebíveis das licitações, sua empresa recebe
-                  os valores em <strong className="text-[#4EB7FF]">até 48 horas</strong>{" "}
-                  após a aprovação.
+                  Não precisa esperar o governo te pagar. Os prazos de pagamento variam de{" "}
+                  <strong className="text-white">30 a 180 dias</strong> e estão sujeitos a atrasos.
+                  Ao antecipar os recebíveis das licitações, sua empresa recebe os valores em{" "}
+                  <strong className="text-[#4EB7FF]">até 48 horas</strong> após a aprovação.
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-slate-300 md:text-lg">
                   Tudo isso sem exigência de garantias, sem burocracia e sem surpresas.
@@ -220,8 +223,8 @@ function HomePageBlue() {
                   R$ <CountUp end={1.3} decimals={1} duration={2200} /> tri
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                  movimentados por ano pelo setor público brasileiro — o maior comprador
-                  da América Latina.
+                  movimentados por ano pelo setor público brasileiro — o maior comprador da América
+                  Latina.
                 </p>
               </div>
             </Reveal>
@@ -231,8 +234,8 @@ function HomePageBlue() {
                   +<CountUp end={160} duration={2200} />
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                  órgãos públicos analisados em todo o Brasil, com dados estratégicos
-                  sobre licitações, contratos e prazos.
+                  órgãos públicos analisados em todo o Brasil, com dados estratégicos sobre
+                  licitações, contratos e prazos.
                 </p>
               </div>
             </Reveal>
@@ -242,8 +245,8 @@ function HomePageBlue() {
                   <CountUp end={18} duration={2200} /> + DF
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                  estados com clientes ativos, em todas as regiões do país — presença
-                  nacional que gera confiança.
+                  estados com clientes ativos, em todas as regiões do país — presença nacional que
+                  gera confiança.
                 </p>
               </div>
             </Reveal>
@@ -253,8 +256,7 @@ function HomePageBlue() {
                   <CountUp end={48} duration={2200} />h
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                  é o prazo máximo para a liberação dos recursos após a formalização da
-                  proposta.
+                  é o prazo máximo para a liberação dos recursos após a formalização da proposta.
                 </p>
               </div>
             </Reveal>
@@ -274,8 +276,8 @@ function HomePageBlue() {
                 O processo de antecipação de recebíveis na Ótmow
               </h2>
               <p className="mt-5 text-base text-slate-300 md:text-lg">
-                Uma jornada simplificada, digital e segura — do cadastro à liberação dos
-                recursos na sua conta.
+                Uma jornada simplificada, digital e segura — do cadastro à liberação dos recursos na
+                sua conta.
               </p>
             </div>
           </Reveal>
@@ -288,9 +290,7 @@ function HomePageBlue() {
                     {s.n}
                   </span>
                   <s.icon className="mt-4 size-7 text-[#4EB7FF]" />
-                  <h3 className="mt-4 font-display text-xl font-semibold text-white">
-                    {s.title}
-                  </h3>
+                  <h3 className="mt-4 font-display text-xl font-semibold text-white">{s.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-slate-400">{s.text}</p>
                   {i < 3 && (
                     <ArrowRight className="absolute right-5 top-1/2 hidden size-5 -translate-y-1/2 text-white/15 lg:block" />
@@ -341,10 +341,9 @@ function HomePageBlue() {
                   Tecnologia própria, agilidade e segurança
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-slate-300 md:text-lg">
-                  Viabilizamos capital para empresas que vendem para o governo,
-                  transformando notas fiscais em liquidez imediata — sem exigência de
-                  garantias reais e com análise rápida. Atuamos exclusivamente com
-                  recebíveis do setor público.
+                  Viabilizamos capital para empresas que vendem para o governo, transformando notas
+                  fiscais em liquidez imediata — sem exigência de garantias reais e com análise
+                  rápida. Atuamos exclusivamente com recebíveis do setor público.
                 </p>
                 <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {sectors.map((s, i) => (
@@ -380,10 +379,10 @@ function HomePageBlue() {
                 Depoimentos
               </span>
               <blockquote className="mt-8 font-display text-balance text-2xl font-medium leading-snug text-white md:text-3xl">
-                "Ficamos positivamente surpresos com o atendimento, a prontidão e a
-                agilidade da Ótmow. Estou encantada com o serviço prestado. Já deixamos
-                contratos de alguns órgãos domiciliados com a Ótmow, com o objetivo de
-                consolidar ainda mais nossa colaboração."
+                "Ficamos positivamente surpresos com o atendimento, a prontidão e a agilidade da
+                Ótmow. Estou encantada com o serviço prestado. Já deixamos contratos de alguns
+                órgãos domiciliados com a Ótmow, com o objetivo de consolidar ainda mais nossa
+                colaboração."
               </blockquote>
               <div className="mt-8">
                 <p className="font-semibold text-[#4EB7FF]">Inessa</p>
@@ -397,9 +396,21 @@ function HomePageBlue() {
           <Reveal delay={150}>
             <div className="mt-16 grid gap-4 sm:grid-cols-3">
               {[
-                { icon: ShieldCheck, t: "Segurança jurídica e tecnológica", d: "Normas do COAF e da LGPD, plataforma segura e criptografada." },
-                { icon: Lock, t: "Sem garantias reais", d: "Operação baseada na força do contrato público e na nota fiscal." },
-                { icon: BadgeCheck, t: "Suporte consultivo", d: "Acompanhamento especializado do início ao fim do processo." },
+                {
+                  icon: ShieldCheck,
+                  t: "Segurança jurídica e tecnológica",
+                  d: "Normas do COAF e da LGPD, plataforma segura e criptografada.",
+                },
+                {
+                  icon: Lock,
+                  t: "Sem garantias reais",
+                  d: "Operação baseada na força do contrato público e na nota fiscal.",
+                },
+                {
+                  icon: BadgeCheck,
+                  t: "Suporte consultivo",
+                  d: "Acompanhamento especializado do início ao fim do processo.",
+                },
               ].map((f) => (
                 <div key={f.t} className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
                   <f.icon className="size-6 text-[#4EB7FF]" />

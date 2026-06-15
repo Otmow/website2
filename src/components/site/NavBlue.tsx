@@ -26,16 +26,12 @@ export function NavBlue() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled
-          ? "border-b border-white/10 bg-[#060d1f]/85 backdrop-blur-xl"
-          : "bg-transparent",
+        scrolled ? "border-b border-white/10 bg-[#060d1f]/85 backdrop-blur-xl" : "bg-transparent",
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-[72px] md:px-8">
         <Link to="/" className="flex items-baseline gap-0.5" onClick={() => setOpen(false)}>
-          <span className="font-display text-2xl font-bold tracking-tight text-white">
-            Ótmow
-          </span>
+          <span className="font-display text-2xl font-bold tracking-tight text-white">Ótmow</span>
           <span className="size-1.5 translate-y-[-2px] rounded-full bg-[#3674EF]" />
         </Link>
 
@@ -62,11 +58,7 @@ export function NavBlue() {
           </a>
         </div>
 
-        <button
-          className="text-white lg:hidden"
-          onClick={() => setOpen(!open)}
-          aria-label="Menu"
-        >
+        <button className="text-white lg:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
           {open ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
       </div>

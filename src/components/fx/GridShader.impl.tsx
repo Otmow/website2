@@ -251,13 +251,23 @@ export function GridImpl({ pixelRatio }: { pixelRatio?: number }) {
     gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
 
     const { shader: vs, log: vsLog } = safeCompile(gl, gl.VERTEX_SHADER, VERT_SRC);
-    if (!vs) { drawError(gl, vsLog); return; }
+    if (!vs) {
+      drawError(gl, vsLog);
+      return;
+    }
     const { shader: fs, log: fsLog } = safeCompile(gl, gl.FRAGMENT_SHADER, SHADER_SRC);
-    if (!fs) { drawError(gl, fsLog); gl.deleteShader(vs); return; }
+    if (!fs) {
+      drawError(gl, fsLog);
+      gl.deleteShader(vs);
+      return;
+    }
     const linked = safeLink(gl, vs, fs);
     gl.deleteShader(vs);
     gl.deleteShader(fs);
-    if (!linked.program) { drawError(gl, linked.log); return; }
+    if (!linked.program) {
+      drawError(gl, linked.log);
+      return;
+    }
     program = linked.program;
 
     const uResolution = gl.getUniformLocation(program, "iResolution");
@@ -285,7 +295,8 @@ export function GridImpl({ pixelRatio }: { pixelRatio?: number }) {
         gl!.useProgram(program!);
         if (resizeScheduled) applySize();
         const dpr = getDpr();
-        const w = canvas.width, h = canvas.height;
+        const w = canvas.width,
+          h = canvas.height;
         if (uResolution) gl!.uniform3f(uResolution, w, h, dpr);
         if (uTime) gl!.uniform1f(uTime, t);
         if (uFrame) gl!.uniform1i(uFrame, frameRef.current);
@@ -305,10 +316,29 @@ export function GridImpl({ pixelRatio }: { pixelRatio?: number }) {
       disposed = true;
       stop();
       canvas.removeEventListener("mousemove", onMove);
-      if (ro) { try { ro.disconnect(); } catch { /* noop */ } ro = null; }
-      try { if (vbo) gl.deleteBuffer(vbo); } catch { /* noop */ }
-      try { if (vao) gl.deleteVertexArray(vao); } catch { /* noop */ }
-      try { if (program) gl.deleteProgram(program); } catch { /* noop */ }
+      if (ro) {
+        try {
+          ro.disconnect();
+        } catch {
+          /* noop */
+        }
+        ro = null;
+      }
+      try {
+        if (vbo) gl.deleteBuffer(vbo);
+      } catch {
+        /* noop */
+      }
+      try {
+        if (vao) gl.deleteVertexArray(vao);
+      } catch {
+        /* noop */
+      }
+      try {
+        if (program) gl.deleteProgram(program);
+      } catch {
+        /* noop */
+      }
     };
   }, [pixelRatio]);
 

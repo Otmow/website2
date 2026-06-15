@@ -78,10 +78,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Ótmow — Liquidez inteligente para quem vende ao setor público" },
-      { name: "description", content: "Antecipe seus recebíveis de contratos públicos com agilidade, tecnologia e total segurança. Receba em até 48 horas, sem garantias reais e sem burocracia." },
+      {
+        name: "description",
+        content:
+          "Antecipe seus recebíveis de contratos públicos com agilidade, tecnologia e total segurança. Receba em até 48 horas, sem garantias reais e sem burocracia.",
+      },
       { name: "author", content: "Ótmow Securitizadora S.A." },
       { property: "og:title", content: "Ótmow — Liquidez inteligente para o setor público" },
-      { property: "og:description", content: "Antecipação de recebíveis de contratos públicos em até 48h. Sem garantias reais, sem burocracia." },
+      {
+        property: "og:description",
+        content:
+          "Antecipação de recebíveis de contratos públicos em até 48h. Sem garantias reais, sem burocracia.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Higgsfield" },

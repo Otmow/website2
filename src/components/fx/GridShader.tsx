@@ -1,9 +1,7 @@
 import { lazy, Suspense } from "react";
 import { useEnableHeavyFx } from "@/hooks/use-enable-heavy-fx";
 
-const GridImpl = lazy(() =>
-  import("./GridShader.impl").then((m) => ({ default: m.GridImpl })),
-);
+const GridImpl = lazy(() => import("./GridShader.impl").then((m) => ({ default: m.GridImpl })));
 
 /** CSS mesh-gradient stand-in for the WebGL grid on low-power / mobile. */
 function GridFallback() {

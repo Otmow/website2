@@ -6,15 +6,7 @@ import { WarpBackgroundBlue } from "@/components/fx/WarpBackgroundBlue";
 import { DottedSurfaceBlue } from "@/components/fx/DottedSurfaceBlue";
 import { Reveal } from "@/components/fx/Reveal";
 import { CountUp } from "@/components/fx/CountUp";
-import {
-  ArrowUpRight,
-  BadgeCheck,
-  FileText,
-  Lock,
-  ShieldCheck,
-  Wallet,
-  Zap,
-} from "lucide-react";
+import { ArrowUpRight, BadgeCheck, FileText, Lock, ShieldCheck, Wallet, Zap } from "lucide-react";
 
 export const Route = createFileRoute("/clientes")({
   component: ClientesPageBlue,
@@ -43,8 +35,8 @@ function ClientesPageBlue() {
           </Reveal>
           <Reveal delay={240}>
             <p className="mx-auto mt-7 max-w-2xl text-balance text-lg font-light text-slate-100/90">
-              Antecipe seus recebíveis de contratos públicos com agilidade, segurança e
-              sem burocracia.
+              Antecipe seus recebíveis de contratos públicos com agilidade, segurança e sem
+              burocracia.
             </p>
           </Reveal>
           <Reveal delay={360}>
@@ -65,9 +57,18 @@ function ClientesPageBlue() {
       <section className="border-y border-white/10 bg-[#081127]">
         <div className="mx-auto grid max-w-7xl gap-px overflow-hidden px-5 py-12 sm:grid-cols-3 md:px-8">
           {[
-            { v: <CountUp end={130} prefix="+R$ " suffix=" M" duration={2200} />, l: "em operações de antecipação realizadas" },
-            { v: <CountUp end={100} prefix="+" duration={2200} />, l: "clientes ativos confiam na Ótmow" },
-            { v: <CountUp end={160} prefix="+" duration={2200} />, l: "órgãos públicos mapeados em todo o Brasil" },
+            {
+              v: <CountUp end={130} prefix="+R$ " suffix=" M" duration={2200} />,
+              l: "em operações de antecipação realizadas",
+            },
+            {
+              v: <CountUp end={100} prefix="+" duration={2200} />,
+              l: "clientes ativos confiam na Ótmow",
+            },
+            {
+              v: <CountUp end={160} prefix="+" duration={2200} />,
+              l: "órgãos públicos mapeados em todo o Brasil",
+            },
           ].map((s, i) => (
             <Reveal key={i} delay={i * 100}>
               <div className="px-6 py-4 text-center">
@@ -96,16 +97,14 @@ function ClientesPageBlue() {
                   Transparência e segurança em cada operação
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-slate-300 md:text-lg">
-                  A Ótmow nasceu para resolver um dos maiores desafios do mercado de
-                  compras públicas: a espera pelo pagamento. Ao transformar recebíveis
-                  performados em capital imediato, garantimos que empresas de todos os
-                  portes mantenham seu crescimento, cumpram compromissos e ampliem
-                  oportunidades.
+                  A Ótmow nasceu para resolver um dos maiores desafios do mercado de compras
+                  públicas: a espera pelo pagamento. Ao transformar recebíveis performados em
+                  capital imediato, garantimos que empresas de todos os portes mantenham seu
+                  crescimento, cumpram compromissos e ampliem oportunidades.
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-slate-300 md:text-lg">
-                  Mais do que um fundo financeiro, somos um elo essencial entre
-                  fornecedores e o poder público — unindo tecnologia, inteligência de
-                  dados e rigor regulatório.
+                  Mais do que um fundo financeiro, somos um elo essencial entre fornecedores e o
+                  poder público — unindo tecnologia, inteligência de dados e rigor regulatório.
                 </p>
               </div>
             </Reveal>
@@ -154,17 +153,33 @@ function ClientesPageBlue() {
                 O que você precisa para antecipar
               </h2>
               <p className="mt-5 text-base text-slate-300">
-                Trabalhamos com recebíveis públicos performados — mercadoria entregue,
-                serviço prestado ou medição apurada.
+                Trabalhamos com recebíveis públicos performados — mercadoria entregue, serviço
+                prestado ou medição apurada.
               </p>
             </div>
           </Reveal>
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: FileText, t: "Notas fiscais emitidas", d: "Documentos fiscais da entrega ou prestação já realizada." },
-              { icon: BadgeCheck, t: "Empenho do órgão", d: "Comprovação do devido empenho junto ao sacado público." },
-              { icon: Wallet, t: "Contrato ou ata", d: "Contrato público ou ata de registro de preços vigente." },
-              { icon: Zap, t: "Docs de crédito", d: "Balanço, DRE e demais documentos convencionais de análise." },
+              {
+                icon: FileText,
+                t: "Notas fiscais emitidas",
+                d: "Documentos fiscais da entrega ou prestação já realizada.",
+              },
+              {
+                icon: BadgeCheck,
+                t: "Empenho do órgão",
+                d: "Comprovação do devido empenho junto ao sacado público.",
+              },
+              {
+                icon: Wallet,
+                t: "Contrato ou ata",
+                d: "Contrato público ou ata de registro de preços vigente.",
+              },
+              {
+                icon: Zap,
+                t: "Docs de crédito",
+                d: "Balanço, DRE e demais documentos convencionais de análise.",
+              },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 100}>
                 <div className="h-full rounded-2xl border border-white/10 bg-white/[0.03] p-7 transition-all hover:border-[#3674EF]/45 hover:bg-white/[0.06]">
@@ -177,9 +192,9 @@ function ClientesPageBlue() {
           </div>
           <Reveal delay={200}>
             <p className="mx-auto mt-12 max-w-2xl text-center text-base text-slate-300">
-              <strong className="text-white">Receba antes, invista melhor.</strong> A
-              gestão financeira dos seus contratos começa aqui — faça uma análise
-              gratuita e descubra como podemos impulsionar seu negócio.
+              <strong className="text-white">Receba antes, invista melhor.</strong> A gestão
+              financeira dos seus contratos começa aqui — faça uma análise gratuita e descubra como
+              podemos impulsionar seu negócio.
             </p>
           </Reveal>
         </div>

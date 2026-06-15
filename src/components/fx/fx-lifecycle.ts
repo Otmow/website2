@@ -6,14 +6,10 @@
  * `frame(now)` is called each animation frame while active. The loop never
  * runs on the server (guarded by callers, which only invoke this in effects).
  */
-export function runManagedRaf(
-  target: Element,
-  frame: (now: number) => void,
-): () => void {
+export function runManagedRaf(target: Element, frame: (now: number) => void): () => void {
   let rafId = 0;
   let onScreen = true;
-  let visible =
-    typeof document === "undefined" ? true : !document.hidden;
+  let visible = typeof document === "undefined" ? true : !document.hidden;
   let running = false;
 
   const loop = (now: number) => {

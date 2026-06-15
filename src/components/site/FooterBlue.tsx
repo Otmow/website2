@@ -20,8 +20,8 @@ export function FooterBlue() {
           </Reveal>
           <Reveal delay={120}>
             <p className="mx-auto mt-6 max-w-2xl text-base text-slate-200/90 md:text-lg">
-              Antecipar os valores das suas notas fiscais de contratos públicos é a forma
-              mais eficiente de manter o caixa saudável e garantir o ritmo do seu negócio.
+              Antecipar os valores das suas notas fiscais de contratos públicos é a forma mais
+              eficiente de manter o caixa saudável e garantir o ritmo do seu negócio.
             </p>
           </Reveal>
           <Reveal delay={220}>
@@ -75,11 +75,31 @@ export function FooterBlue() {
                 Navegação
               </h4>
               <ul className="mt-4 space-y-3 text-sm">
-                <li><Link to="/sobre" className="text-slate-300 hover:text-[#4EB7FF]">Sobre a Ótmow</Link></li>
-                <li><Link to="/clientes" className="text-slate-300 hover:text-[#4EB7FF]">Para empresas</Link></li>
-                <li><Link to="/parceiros" className="text-slate-300 hover:text-[#4EB7FF]">Programa de parceria</Link></li>
-                <li><Link to="/gestores" className="text-slate-300 hover:text-[#4EB7FF]">Gestores de relacionamento</Link></li>
-                <li><Link to="/faq" className="text-slate-300 hover:text-[#4EB7FF]">Perguntas frequentes</Link></li>
+                <li>
+                  <Link to="/sobre" className="text-slate-300 hover:text-[#4EB7FF]">
+                    Sobre a Ótmow
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/clientes" className="text-slate-300 hover:text-[#4EB7FF]">
+                    Para empresas
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/parceiros" className="text-slate-300 hover:text-[#4EB7FF]">
+                    Programa de parceria
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/gestores" className="text-slate-300 hover:text-[#4EB7FF]">
+                    Gestores de relacionamento
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/faq" className="text-slate-300 hover:text-[#4EB7FF]">
+                    Perguntas frequentes
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -115,10 +135,10 @@ export function FooterBlue() {
           </div>
 
           <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
-            <p className="text-xs text-slate-500">©2025 Ótmow Securitizadora S.A. Todos os direitos reservados.</p>
-            <p className="text-xs text-slate-600">
-              Operações em conformidade com COAF e LGPD.
+            <p className="text-xs text-slate-500">
+              ©2025 Ótmow Securitizadora S.A. Todos os direitos reservados.
             </p>
+            <p className="text-xs text-slate-600">Operações em conformidade com COAF e LGPD.</p>
           </div>
         </div>
       </div>
