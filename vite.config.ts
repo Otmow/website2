@@ -18,6 +18,19 @@ export default defineConfig(({ command }) => ({
   ssr: {
     noExternal: command === "build" ? true : undefined,
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("three")) return "vendor-three";
+            if (id.includes("@paper-design")) return "vendor-shaders";
+            if (id.includes("react-dom") || id.includes("/react/")) return "vendor-react";
+          }
+        },
+      },
+    },
+  },
   plugins: [
     // TanStack Start plugin must run before React's plugin.
     //
