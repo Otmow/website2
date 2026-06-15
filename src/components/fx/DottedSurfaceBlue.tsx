@@ -1,124 +1,28 @@
-import { cn } from '@/lib/utils';
-import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
+import { lazy, Suspense } from "react";
+import type React from "react";
+import { cn } from "@/lib/utils";
+import { useEnableHeavyFx } from "@/hooks/use-enable-heavy-fx";
 
-type DottedSurfaceProps = Omit<React.ComponentProps<'div'>, 'ref'>;
+type DottedSurfaceProps = Omit<React.ComponentProps<"div">, "ref">;
+
+const DottedSurfaceImpl = lazy(() =>
+  import("./DottedSurfaceBlue.impl").then((m) => ({ default: m.DottedSurfaceImpl })),
+);
 
 export function DottedSurfaceBlue({ className, ...props }: DottedSurfaceProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const sceneRef = useRef<{
-    scene: THREE.Scene;
-    camera: THREE.PerspectiveCamera;
-    renderer: THREE.WebGLRenderer;
-    animationId: number;
-  } | null>(null);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-    const container = containerRef.current;
-
-    const SEPARATION = 150;
-    const AMOUNTX = 40;
-    const AMOUNTY = 60;
-
-    const scene = new THREE.Scene();
-    scene.fog = new THREE.Fog(0x0a1228, 2000, 10000);
-
-    const camera = new THREE.PerspectiveCamera(
-      60,
-      container.clientWidth / Math.max(container.clientHeight, 1),
-      1,
-      10000,
+  const enabled = useEnableHeavyFx();
+  if (!enabled) {
+    // No dots needed as a fallback — the section already has a dark background.
+    return (
+      <div
+        className={cn("pointer-events-none absolute inset-0 overflow-hidden", className)}
+        {...props}
+      />
     );
-    camera.position.set(0, 355, 1220);
-
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setClearColor(0x000000, 0);
-    container.appendChild(renderer.domElement);
-
-    const positions: number[] = [];
-    const colors: number[] = [];
-    const geometry = new THREE.BufferGeometry();
-
-    for (let ix = 0; ix < AMOUNTX; ix++) {
-      for (let iy = 0; iy < AMOUNTY; iy++) {
-        const x = ix * SEPARATION - (AMOUNTX * SEPARATION) / 2;
-        const z = iy * SEPARATION - (AMOUNTY * SEPARATION) / 2;
-        positions.push(x, 0, z);
-        // teal-blue dots on navy
-        colors.push(0.30, 0.55, 0.95);
-      }
-    }
-
-    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-    geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
-
-    const material = new THREE.PointsMaterial({
-      size: 8,
-      vertexColors: true,
-      transparent: true,
-      opacity: 0.55,
-      sizeAttenuation: true,
-    });
-
-    const points = new THREE.Points(geometry, material);
-    scene.add(points);
-
-    let count = 0;
-    let animationId = 0;
-
-    const animate = () => {
-      animationId = requestAnimationFrame(animate);
-      const positionAttribute = geometry.attributes.position;
-      const pos = positionAttribute.array as Float32Array;
-
-      let i = 0;
-      for (let ix = 0; ix < AMOUNTX; ix++) {
-        for (let iy = 0; iy < AMOUNTY; iy++) {
-          const index = i * 3;
-          pos[index + 1] =
-            Math.sin((ix + count) * 0.3) * 50 + Math.sin((iy + count) * 0.5) * 50;
-          i++;
-        }
-      }
-      positionAttribute.needsUpdate = true;
-      renderer.render(scene, camera);
-      count += 0.1;
-      if (sceneRef.current) sceneRef.current.animationId = animationId;
-    };
-
-    const handleResize = () => {
-      camera.aspect = container.clientWidth / Math.max(container.clientHeight, 1);
-      camera.updateProjectionMatrix();
-      renderer.setSize(container.clientWidth, container.clientHeight);
-    };
-    window.addEventListener('resize', handleResize);
-    animate();
-
-    sceneRef.current = { scene, camera, renderer, animationId };
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      if (sceneRef.current) {
-        cancelAnimationFrame(sceneRef.current.animationId);
-        geometry.dispose();
-        material.dispose();
-        sceneRef.current.renderer.dispose();
-        if (container.contains(sceneRef.current.renderer.domElement)) {
-          container.removeChild(sceneRef.current.renderer.domElement);
-        }
-        sceneRef.current = null;
-      }
-    };
-  }, []);
-
+  }
   return (
-    <div
-      ref={containerRef}
-      className={cn('pointer-events-none absolute inset-0 overflow-hidden', className)}
-      {...props}
-    />
+    <Suspense fallback={null}>
+      <DottedSurfaceImpl className={className} {...props} />
+    </Suspense>
   );
 }
