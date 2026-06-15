@@ -1,19 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { usePrefersReducedMotion } from "@/hooks/use-reduced-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 /**
  * Bandwidth-friendly autoplaying background video.
- *
- * - SSR renders the poster <img> so first paint is instant and there is no
- *   layout shift (width/height drive the intrinsic ratio).
- * - The <video> is only mounted once it scrolls near the viewport
- *   (IntersectionObserver), and uses preload="none" so nothing downloads
- *   until then.
- * - With "prefers-reduced-motion", the video is never loaded — the poster
- *   stays, which also saves the full video payload on those devices.
+ * - SSR renders the poster <img> so first paint is instant, no layout shift.
+ * - <video> mounts only when near the viewport (IntersectionObserver), preload="none".
+ * - On mobile, or with prefers-reduced-motion, the video never loads — the poster
+ *   stays, saving the entire video payload on the devices that need it most.
  */
 export function LazyVideo({
   src,
+  srcWebm,
   poster,
   className,
   label,
@@ -21,6 +19,7 @@ export function LazyVideo({
   height = 720,
 }: {
   src: string;
+  srcWebm?: string;
   poster: string;
   className?: string;
   label: string;
@@ -29,10 +28,13 @@ export function LazyVideo({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = usePrefersReducedMotion();
+  const isMobile = useIsMobile();
   const [show, setShow] = useState(false);
 
+  const allowVideo = !reduced && !isMobile;
+
   useEffect(() => {
-    if (reduced) return;
+    if (!allowVideo) return;
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
@@ -46,13 +48,12 @@ export function LazyVideo({
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, [reduced]);
+  }, [allowVideo]);
 
   return (
     <div ref={ref} className={className}>
-      {show ? (
+      {allowVideo && show ? (
         <video
-          src={src}
           poster={poster}
           width={width}
           height={height}
@@ -63,7 +64,10 @@ export function LazyVideo({
           preload="none"
           aria-label={label}
           className="block h-auto w-full"
-        />
+        >
+          {srcWebm ? <source src={srcWebm} type="video/webm" /> : null}
+          <source src={src} type="video/mp4" />
+        </video>
       ) : (
         <img
           src={poster}

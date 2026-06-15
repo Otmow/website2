@@ -178,6 +178,7 @@ function HomePageBlue() {
                 <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-blue-600/20 to-[#4EB7FF]/20 blur-2xl" />
                 <LazyVideo
                   src="/img/blue/brasilia.mp4"
+                  srcWebm="/img/blue/brasilia.webm"
                   poster="/img/blue/brasilia.jpg"
                   label="Equipe Ótmow analisando operações de antecipação"
                   className="relative block w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl"
@@ -324,6 +325,7 @@ function HomePageBlue() {
                 <div className="absolute -inset-4 rounded-3xl bg-gradient-to-bl from-[#4EB7FF]/15 to-blue-600/15 blur-2xl" />
                 <LazyVideo
                   src="/img/blue/brasilnetwork.mp4"
+                  srcWebm="/img/blue/brasilnetwork.webm"
                   poster="/img/blue/brasil-network.jpg"
                   label="Mapa do Brasil em rede de dados — presença nacional da Ótmow"
                   className="relative block w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl"
