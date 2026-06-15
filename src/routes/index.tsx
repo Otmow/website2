@@ -3,6 +3,7 @@ import { NavBlue } from "@/components/site/NavBlue";
 import { FooterBlue } from "@/components/site/FooterBlue";
 import { SimuladorAntecipacao } from "@/components/site/SimuladorAntecipacao";
 import { LazyVideo } from "@/components/fx/LazyVideo";
+import { LiteYouTube } from "@/components/fx/LiteYouTube";
 import { WarpBackgroundBlue } from "@/components/fx/WarpBackgroundBlue";
 import { DottedSurfaceBlue } from "@/components/fx/DottedSurfaceBlue";
 import { GridShader } from "@/components/fx/GridShader";
@@ -364,6 +365,49 @@ function HomePageBlue() {
                   Nossa trajetória de crescimento
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                 </Link>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ VÍDEOS ============ */}
+      <section className="relative overflow-hidden py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#4EB7FF]">
+                Conheça a Ótmow
+              </span>
+              <h2 className="mt-4 font-display text-balance text-3xl font-bold leading-tight md:text-5xl">
+                Assista e entenda como funciona
+              </h2>
+            </div>
+          </Reveal>
+
+          <div className="mt-14 grid gap-8 md:grid-cols-2">
+            <Reveal>
+              <div>
+                <h3 className="font-display text-lg font-semibold text-white md:text-xl">
+                  Podcast explicativo
+                </h3>
+                <p className="mt-2 mb-5 text-sm leading-relaxed text-slate-400">
+                  Uma conversa direta sobre antecipação de recebíveis públicos e como a Ótmow
+                  destrava o caixa da sua empresa.
+                </p>
+                <LiteYouTube id="fE-LkwIrT-s" title="Podcast explicativo — Ótmow" />
+              </div>
+            </Reveal>
+            <Reveal delay={150}>
+              <div>
+                <h3 className="font-display text-lg font-semibold text-white md:text-xl">
+                  Sobre a Ótmow
+                </h3>
+                <p className="mt-2 mb-5 text-sm leading-relaxed text-slate-400">
+                  Quem somos, como operamos e por que viramos referência em liquidez para quem vende
+                  ao setor público.
+                </p>
+                <LiteYouTube id="DSg6TKhjNxI" title="Sobre a Ótmow" />
               </div>
             </Reveal>
           </div>
