@@ -64,28 +64,29 @@ function GestoresPageBlue() {
             <div>
               <Reveal>
                 <span className="glass inline-flex rounded-full px-4 py-2 text-xs font-medium tracking-wide text-[#7cc6ff]">
-                  Gestores de relacionamento · Debêntures privadas
+                  Gestores de relacionamento · Distribuição de FIDC
                 </span>
               </Reveal>
               <Reveal delay={120}>
                 <h1 className="mt-7 font-display text-balance text-4xl font-bold leading-[1.08] md:text-6xl">
-                  Converta investidores em{" "}
-                  <span className="gradient-text-blue">receita recorrente</span> sustentável
+                  Traga investidores para o nosso FIDC e construa{" "}
+                  <span className="gradient-text-blue">receita recorrente</span>
                 </h1>
               </Reveal>
               <Reveal delay={240}>
                 <p className="mt-7 max-w-xl text-base leading-relaxed text-slate-100/90 md:text-lg">
-                  Distribua ativos de renda fixa lastreados em recebíveis públicos, com liquidez
-                  controlada. Uma estrutura de alto nível para investidores que buscam segurança e
-                  rentabilidade consistente.
+                  Seu papel é originar e manter investidores; o nosso é estruturar o ativo. Eles
+                  aportam na cota subordinada do FIDC da Ótmow — renda fixa com risco soberano,
+                  lastreada em recebíveis de entes públicos — enquanto cuidamos da diligência, da
+                  governança e do monitoramento.
                 </p>
               </Reveal>
               <Reveal delay={340}>
                 <ul className="mt-7 space-y-3">
                   {[
-                    "Comissão recorrente sobre a carteira ativa",
-                    "Produto sem burocracia: liberação em 48h após aprovação",
-                    "Estrutura robusta de FIDC e auditoria de lastro",
+                    "Comissão recorrente baseada no AUM, enquanto o investidor permanece alocado",
+                    "Ativo de renda fixa com risco soberano, lastreado em recebíveis públicos",
+                    "Estrutura robusta de FIDC, com auditoria de lastro e governança",
                   ].map((b) => (
                     <li key={b} className="flex items-start gap-3 text-sm text-slate-200">
                       <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-[#4EB7FF]" />
