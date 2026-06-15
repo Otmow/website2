@@ -1,41 +1,29 @@
-import { useEffect, useState } from "react";
-import { Warp } from "@paper-design/shaders-react";
+import { lazy, Suspense } from "react";
+import { useEnableHeavyFx } from "@/hooks/use-enable-heavy-fx";
+
+const WarpImpl = lazy(() =>
+  import("./WarpBackgroundBlue.impl").then((m) => ({ default: m.WarpImpl })),
+);
+
+/** Static gradient shown on SSR, mobile, reduced-motion, and low-power devices. */
+function GradientFallback() {
+  return (
+    <div
+      className="absolute inset-0"
+      style={{
+        background:
+          "linear-gradient(135deg, hsl(222,75%,9%) 0%, hsl(218,80%,18%) 50%, hsl(210,85%,22%) 100%)",
+      }}
+    />
+  );
+}
 
 export function WarpBackgroundBlue({ speed = 0.8 }: { speed?: number }) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  if (!mounted) {
-    return (
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(135deg, hsl(222,75%,9%) 0%, hsl(218,80%,18%) 50%, hsl(210,85%,22%) 100%)",
-        }}
-      />
-    );
-  }
+  const enabled = useEnableHeavyFx();
+  if (!enabled) return <GradientFallback />;
   return (
-    <div className="absolute inset-0">
-      <Warp
-        style={{ height: "100%", width: "100%" }}
-        proportion={0.45}
-        softness={1}
-        distortion={0.25}
-        swirl={0.8}
-        swirlIterations={10}
-        shape="checks"
-        shapeScale={0.1}
-        scale={1}
-        rotation={0}
-        speed={speed}
-        colors={[
-          "hsl(222, 85%, 11%)",
-          "hsl(210, 95%, 62%)",
-          "hsl(224, 80%, 24%)",
-          "hsl(205, 100%, 72%)",
-        ]}
-      />
-    </div>
+    <Suspense fallback={<GradientFallback />}>
+      <WarpImpl speed={speed} />
+    </Suspense>
   );
 }
