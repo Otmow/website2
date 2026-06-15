@@ -80,4 +80,7 @@ When the user requests a durable behavior change, record it here or in the relev
 
 ## Child DOX Index
 
-This project is not yet indexed. Before continuing you must scan the project, build the DOX tree and replace this message with the actual index. Go deep and scan files recursively to properly evaluate complexity and create nested DOX files where needed.
+The project is indexed. The DOX rail lives in `AGENTS.md` files:
+
+- `AGENTS.md` (root) — stack, SSR contract, performance/responsiveness budget, verification.
+  - `src/components/fx/AGENTS.md` — visual effects zone: shader gating, RAF lifecycle, LazyVideo media contract.
