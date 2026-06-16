@@ -1,0 +1,55 @@
+import { r, j as e } from "./vendor-react-DLnSei1N.js";
+import { c as i } from "./FooterBlue-BnGcN94H.js";
+const n = [
+    [
+      "path",
+      {
+        d: "M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z",
+        key: "10ikf1",
+      },
+    ],
+  ],
+  c = i("play", n);
+function p({ id: t, title: a }) {
+  const [l, o] = r.useState(!1),
+    s = `https://i.ytimg.com/vi/${t}/hqdefault.jpg`;
+  return e.jsx("div", {
+    className:
+      "relative aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl",
+    children: l
+      ? e.jsx("iframe", {
+          className: "absolute inset-0 h-full w-full",
+          src: `https://www.youtube-nocookie.com/embed/${t}?autoplay=1&rel=0`,
+          title: a,
+          loading: "lazy",
+          allow:
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+          allowFullScreen: !0,
+        })
+      : e.jsxs("button", {
+          type: "button",
+          onClick: () => o(!0),
+          "aria-label": `Reproduzir vídeo: ${a}`,
+          className: "group absolute inset-0 h-full w-full cursor-pointer",
+          children: [
+            e.jsx("img", {
+              src: s,
+              alt: a,
+              loading: "lazy",
+              decoding: "async",
+              className:
+                "absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105",
+            }),
+            e.jsx("span", {
+              className: "absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/30",
+            }),
+            e.jsx("span", {
+              className:
+                "absolute left-1/2 top-1/2 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#3674EF] shadow-lg transition-transform duration-300 group-hover:scale-110",
+              children: e.jsx(c, { className: "size-7 translate-x-0.5 fill-white text-white" }),
+            }),
+          ],
+        }),
+  });
+}
+export { p as L };

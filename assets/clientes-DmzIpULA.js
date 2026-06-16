@@ -1,0 +1,318 @@
+import { j as e } from "./vendor-react-DLnSei1N.js";
+import { N as l, W as d, R as s, A as n, F as c } from "./FooterBlue-C091Jo7C.js";
+import { S as m, B as i } from "./SimuladorAntecipacao-BAcPJkZT.js";
+import { D as x } from "./DottedSurfaceBlue-svXo1NfD.js";
+import { C as o } from "./CountUp-CnNs-zEX.js";
+import { L as p } from "./lock-BS6n1Q2k.js";
+import { S as h } from "./shield-check-Brpfnbh_.js";
+import { c as r, F as u } from "./index-CqBNPuiB.js";
+const g = [
+    [
+      "path",
+      {
+        d: "M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1",
+        key: "18etb6",
+      },
+    ],
+    ["path", { d: "M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4", key: "xoc0q4" }],
+  ],
+  f = r("wallet", g);
+const j = [
+    [
+      "path",
+      {
+        d: "M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z",
+        key: "1xq2db",
+      },
+    ],
+  ],
+  b = r("zap", j);
+function q() {
+  return e.jsxs("div", {
+    className: "min-h-screen bg-[#060d1f] text-white",
+    children: [
+      e.jsx(l, {}),
+      e.jsxs("section", {
+        className: "relative overflow-hidden",
+        children: [
+          e.jsx(d, { speed: 0.6 }),
+          e.jsx("div", {
+            className: "absolute inset-0 bg-gradient-to-b from-[#040a1c]/45 to-[#060d1f]",
+          }),
+          e.jsxs("div", {
+            className:
+              "relative z-10 mx-auto max-w-5xl px-5 pb-24 pt-44 text-center md:px-8 md:pb-32 md:pt-52",
+            children: [
+              e.jsx(s, {
+                children: e.jsx("span", {
+                  className:
+                    "glass inline-flex rounded-full px-4 py-2 text-xs font-medium tracking-wide text-[#7cc6ff]",
+                  children: "Para empresas que vendem ao governo",
+                }),
+              }),
+              e.jsx(s, {
+                delay: 120,
+                children: e.jsxs("h1", {
+                  className:
+                    "mt-7 font-display text-balance text-4xl font-bold leading-[1.08] md:text-6xl",
+                  children: [
+                    "Transforme o valor da sua nota fiscal performada em",
+                    " ",
+                    e.jsx("span", {
+                      className: "gradient-text-blue",
+                      children: "capital imediato",
+                    }),
+                  ],
+                }),
+              }),
+              e.jsx(s, {
+                delay: 240,
+                children: e.jsx("p", {
+                  className:
+                    "mx-auto mt-7 max-w-2xl text-balance text-lg font-light text-slate-100/90",
+                  children:
+                    "Antecipe seus recebíveis de contratos públicos com agilidade, segurança e sem burocracia.",
+                }),
+              }),
+              e.jsx(s, {
+                delay: 360,
+                children: e.jsxs("a", {
+                  href: "https://app.otmow.com/pt-BR/loan/intake/details",
+                  target: "_blank",
+                  rel: "noreferrer",
+                  className:
+                    "group mt-10 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[#06122b] transition-transform duration-300 hover:scale-105",
+                  children: [
+                    "Solicite uma análise gratuita",
+                    e.jsx(n, {
+                      className:
+                        "size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5",
+                    }),
+                  ],
+                }),
+              }),
+            ],
+          }),
+        ],
+      }),
+      e.jsx("section", {
+        className: "border-y border-white/10 bg-[#081127]",
+        children: e.jsx("div", {
+          className:
+            "mx-auto grid max-w-7xl gap-px overflow-hidden px-5 py-12 sm:grid-cols-3 md:px-8",
+          children: [
+            {
+              v: e.jsx(o, { end: 130, prefix: "+R$ ", suffix: " M", duration: 2200 }),
+              l: "em operações de antecipação realizadas",
+            },
+            {
+              v: e.jsx(o, { end: 100, prefix: "+", duration: 2200 }),
+              l: "clientes ativos confiam na Ótmow",
+            },
+            {
+              v: e.jsx(o, { end: 160, prefix: "+", duration: 2200 }),
+              l: "órgãos públicos mapeados em todo o Brasil",
+            },
+          ].map((a, t) =>
+            e.jsx(
+              s,
+              {
+                delay: t * 100,
+                children: e.jsxs("div", {
+                  className: "px-6 py-4 text-center",
+                  children: [
+                    e.jsx("p", {
+                      className: "font-display text-4xl font-bold text-[#4EB7FF] md:text-5xl",
+                      children: a.v,
+                    }),
+                    e.jsx("p", { className: "mt-2 text-sm text-slate-400", children: a.l }),
+                  ],
+                }),
+              },
+              t,
+            ),
+          ),
+        }),
+      }),
+      e.jsx(m, {}),
+      e.jsxs("section", {
+        className: "relative overflow-hidden py-24 md:py-32",
+        children: [
+          e.jsx(x, { className: "opacity-40" }),
+          e.jsx("div", {
+            className: "relative z-10 mx-auto max-w-7xl px-5 md:px-8",
+            children: e.jsxs("div", {
+              className: "grid items-start gap-14 lg:grid-cols-2",
+              children: [
+                e.jsx(s, {
+                  children: e.jsxs("div", {
+                    children: [
+                      e.jsx("span", {
+                        className:
+                          "text-xs font-semibold uppercase tracking-[0.25em] text-[#4EB7FF]",
+                        children: "Compromisso",
+                      }),
+                      e.jsx("h2", {
+                        className:
+                          "mt-4 font-display text-balance text-3xl font-bold leading-tight md:text-5xl",
+                        children: "Transparência e segurança em cada operação",
+                      }),
+                      e.jsx("p", {
+                        className: "mt-6 text-base leading-relaxed text-slate-300 md:text-lg",
+                        children:
+                          "A Ótmow nasceu para resolver um dos maiores desafios do mercado de compras públicas: a espera pelo pagamento. Ao transformar recebíveis performados em capital imediato, garantimos que empresas de todos os portes mantenham seu crescimento, cumpram compromissos e ampliem oportunidades.",
+                      }),
+                      e.jsx("p", {
+                        className: "mt-4 text-base leading-relaxed text-slate-300 md:text-lg",
+                        children:
+                          "Mais do que um fundo financeiro, somos um elo essencial entre fornecedores e o poder público — unindo tecnologia, inteligência de dados e rigor regulatório.",
+                      }),
+                    ],
+                  }),
+                }),
+                e.jsx("div", {
+                  className: "space-y-5",
+                  children: [
+                    {
+                      icon: i,
+                      t: "Suporte consultivo em todas as etapas",
+                      d: "Nossa equipe acompanha você do início ao fim do processo, oferecendo orientação especializada para facilitar a operação e tirar dúvidas sempre que necessário.",
+                    },
+                    {
+                      icon: p,
+                      t: "Sem exigência de garantias reais",
+                      d: "Realizamos a antecipação com base na força do contrato público e na nota fiscal, sem necessidade de oferecer imóveis, veículos ou bens como garantia.",
+                    },
+                    {
+                      icon: h,
+                      t: "Segurança jurídica e tecnológica",
+                      d: "Seguimos as normas do COAF e da LGPD, com uma plataforma segura e criptografada que garante a integridade das informações e das transações.",
+                    },
+                  ].map((a, t) =>
+                    e.jsx(
+                      s,
+                      {
+                        delay: t * 120,
+                        children: e.jsxs("div", {
+                          className:
+                            "flex gap-5 rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition-colors hover:border-[#3674EF]/45",
+                          children: [
+                            e.jsx("div", {
+                              className:
+                                "flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#3674EF]/15",
+                              children: e.jsx(a.icon, { className: "size-6 text-[#4EB7FF]" }),
+                            }),
+                            e.jsxs("div", {
+                              children: [
+                                e.jsx("h3", {
+                                  className: "font-display text-lg font-semibold",
+                                  children: a.t,
+                                }),
+                                e.jsx("p", {
+                                  className: "mt-2 text-sm leading-relaxed text-slate-400",
+                                  children: a.d,
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      },
+                      a.t,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+          }),
+        ],
+      }),
+      e.jsx("section", {
+        className: "bg-[#081127] py-24 md:py-32",
+        children: e.jsxs("div", {
+          className: "mx-auto max-w-7xl px-5 md:px-8",
+          children: [
+            e.jsx(s, {
+              children: e.jsxs("div", {
+                className: "mx-auto max-w-2xl text-center",
+                children: [
+                  e.jsx("h2", {
+                    className: "font-display text-balance text-3xl font-bold md:text-5xl",
+                    children: "O que você precisa para antecipar",
+                  }),
+                  e.jsx("p", {
+                    className: "mt-5 text-base text-slate-300",
+                    children:
+                      "Trabalhamos com recebíveis públicos performados — mercadoria entregue, serviço prestado ou medição apurada.",
+                  }),
+                ],
+              }),
+            }),
+            e.jsx("div", {
+              className: "mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4",
+              children: [
+                {
+                  icon: u,
+                  t: "Notas fiscais emitidas",
+                  d: "Documentos fiscais da entrega ou prestação já realizada.",
+                },
+                {
+                  icon: i,
+                  t: "Empenho do órgão",
+                  d: "Comprovação do devido empenho junto ao sacado público.",
+                },
+                {
+                  icon: f,
+                  t: "Contrato ou ata",
+                  d: "Contrato público ou ata de registro de preços vigente.",
+                },
+                {
+                  icon: b,
+                  t: "Docs de crédito",
+                  d: "Balanço, DRE e demais documentos convencionais de análise.",
+                },
+              ].map((a, t) =>
+                e.jsx(
+                  s,
+                  {
+                    delay: t * 100,
+                    children: e.jsxs("div", {
+                      className:
+                        "h-full rounded-2xl border border-white/10 bg-white/[0.03] p-7 transition-all hover:border-[#3674EF]/45 hover:bg-white/[0.06]",
+                      children: [
+                        e.jsx(a.icon, { className: "size-7 text-[#4EB7FF]" }),
+                        e.jsx("h3", {
+                          className: "mt-4 font-display text-lg font-semibold",
+                          children: a.t,
+                        }),
+                        e.jsx("p", {
+                          className: "mt-2 text-sm leading-relaxed text-slate-400",
+                          children: a.d,
+                        }),
+                      ],
+                    }),
+                  },
+                  a.t,
+                ),
+              ),
+            }),
+            e.jsx(s, {
+              delay: 200,
+              children: e.jsxs("p", {
+                className: "mx-auto mt-12 max-w-2xl text-center text-base text-slate-300",
+                children: [
+                  e.jsx("strong", {
+                    className: "text-white",
+                    children: "Receba antes, invista melhor.",
+                  }),
+                  " A gestão financeira dos seus contratos começa aqui — faça uma análise gratuita e descubra como podemos impulsionar seu negócio.",
+                ],
+              }),
+            }),
+          ],
+        }),
+      }),
+      e.jsx(c, {}),
+    ],
+  });
+}
+export { q as component };
