@@ -15,6 +15,7 @@
 ## File Structure
 
 **Create:**
+
 - `src/hooks/use-enable-heavy-fx.ts` — shared capability gate (mobile + reduced-motion + core count)
 - `src/components/fx/WarpBackgroundBlue.impl.tsx` — heavy paper-design Warp + lifecycle (moved out of public file)
 - `src/components/fx/DottedSurfaceBlue.impl.tsx` — heavy three.js surface + lifecycle (moved out)
@@ -24,6 +25,7 @@
 - `src/components/fx/AGENTS.md` — FX zone contracts
 
 **Modify:**
+
 - `src/components/fx/WarpBackgroundBlue.tsx` — becomes the light gate+lazy wrapper (public API unchanged)
 - `src/components/fx/DottedSurfaceBlue.tsx` — light gate+lazy wrapper
 - `src/components/fx/GridShader.tsx` — light gate+lazy wrapper
@@ -64,6 +66,7 @@ If the user declined git, skip this task and ignore all later `git commit` steps
 ## Task 1: Re-encode hero videos with ffmpeg
 
 **Files:**
+
 - Modify: `public/img/blue/brasilia.mp4`, `public/img/blue/brasilnetwork.mp4`
 - Create: `public/img/blue/brasilia.webm`, `public/img/blue/brasilnetwork.webm`
 - Create (backups): `public/img/blue/brasilia.orig.mp4`, `public/img/blue/brasilnetwork.orig.mp4`
@@ -122,6 +125,7 @@ git commit -m "perf: re-encode hero videos (25MB -> ~3MB), add WebM, keep origin
 ## Task 2: Shared FX capability gate hook
 
 **Files:**
+
 - Create: `src/hooks/use-enable-heavy-fx.ts`
 
 - [ ] **Step 1: Write the hook**
@@ -174,6 +178,7 @@ git commit -m "feat: add useEnableHeavyFx capability gate for WebGL effects"
 ## Task 3: RAF lifecycle helper (pause off-screen / tab-hidden)
 
 **Files:**
+
 - Create: `src/components/fx/fx-lifecycle.ts`
 
 - [ ] **Step 1: Write the helper**
@@ -187,14 +192,10 @@ git commit -m "feat: add useEnableHeavyFx capability gate for WebGL effects"
  * `frame(now)` is called each animation frame while active. The loop never
  * runs on the server (guarded by callers, which only invoke this in effects).
  */
-export function runManagedRaf(
-  target: Element,
-  frame: (now: number) => void,
-): () => void {
+export function runManagedRaf(target: Element, frame: (now: number) => void): () => void {
   let rafId = 0;
   let onScreen = true;
-  let visible =
-    typeof document === "undefined" ? true : !document.hidden;
+  let visible = typeof document === "undefined" ? true : !document.hidden;
   let running = false;
 
   const loop = (now: number) => {
@@ -257,6 +258,7 @@ git commit -m "feat: add runManagedRaf — pauses RAF off-screen and when tab hi
 ## Task 4: Split WarpBackgroundBlue into gate + lazy impl
 
 **Files:**
+
 - Create: `src/components/fx/WarpBackgroundBlue.impl.tsx`
 - Modify: `src/components/fx/WarpBackgroundBlue.tsx` (full rewrite to gate)
 
@@ -343,6 +345,7 @@ git commit -m "perf: gate + lazy-load Warp shader; gradient fallback on mobile/r
 ## Task 5: Split + lifecycle-fix DottedSurfaceBlue (three.js)
 
 **Files:**
+
 - Create: `src/components/fx/DottedSurfaceBlue.impl.tsx`
 - Modify: `src/components/fx/DottedSurfaceBlue.tsx` (full rewrite to gate)
 
@@ -420,8 +423,7 @@ export function DottedSurfaceImpl({ className, ...props }: DottedSurfaceProps) {
       let i = 0;
       for (let ix = 0; ix < AMOUNTX; ix++) {
         for (let iy = 0; iy < AMOUNTY; iy++) {
-          pos[i * 3 + 1] =
-            Math.sin((ix + count) * 0.3) * 50 + Math.sin((iy + count) * 0.5) * 50;
+          pos[i * 3 + 1] = Math.sin((ix + count) * 0.3) * 50 + Math.sin((iy + count) * 0.5) * 50;
           i++;
         }
       }
@@ -509,12 +511,14 @@ git commit -m "perf: gate + lazy-load three.js dotted surface; pause RAF off-scr
 ## Task 6: Split + lifecycle-fix GridShader (WebGL2)
 
 **Files:**
+
 - Create: `src/components/fx/GridShader.impl.tsx`
 - Modify: `src/components/fx/GridShader.tsx` (full rewrite to gate)
 
 - [ ] **Step 1: Create the heavy impl** (`GridShader.impl.tsx`)
 
 Copy the entire current `GridShader.tsx` content into `GridShader.impl.tsx`, rename the exported function `GridShader` → `GridImpl`, and replace its bespoke RAF loop with `runManagedRaf(canvas, tick)`. Specifically:
+
 - Add `import { runManagedRaf } from "./fx-lifecycle";`
 - Remove `rafRef`, `startRef` reset logic stays, and the manual `requestAnimationFrame(tick)` calls.
 - Replace the `tick(now)` self-scheduling tail (`rafRef.current = requestAnimationFrame(tick)`) — `runManagedRaf` schedules frames, so `tick` must NOT re-schedule itself. Change signature to `const frame = (now: number) => { ...body without the trailing requestAnimationFrame... }`.
@@ -532,7 +536,8 @@ const frame = (now: number) => {
     gl!.useProgram(program!);
     if (resizeScheduled) applySize();
     const dpr = getDpr();
-    const w = canvas.width, h = canvas.height;
+    const w = canvas.width,
+      h = canvas.height;
     if (uResolution) gl!.uniform3f(uResolution, w, h, dpr);
     if (uTime) gl!.uniform1f(uTime, t);
     if (uFrame) gl!.uniform1i(uFrame, frameRef.current);
@@ -556,10 +561,29 @@ return () => {
   disposed = true;
   stop();
   canvas.removeEventListener("mousemove", onMove);
-  if (ro) { try { ro.disconnect(); } catch { /* noop */ } ro = null; }
-  try { if (vbo) gl.deleteBuffer(vbo); } catch { /* noop */ }
-  try { if (vao) gl.deleteVertexArray(vao); } catch { /* noop */ }
-  try { if (program) gl.deleteProgram(program); } catch { /* noop */ }
+  if (ro) {
+    try {
+      ro.disconnect();
+    } catch {
+      /* noop */
+    }
+    ro = null;
+  }
+  try {
+    if (vbo) gl.deleteBuffer(vbo);
+  } catch {
+    /* noop */
+  }
+  try {
+    if (vao) gl.deleteVertexArray(vao);
+  } catch {
+    /* noop */
+  }
+  try {
+    if (program) gl.deleteProgram(program);
+  } catch {
+    /* noop */
+  }
 };
 ```
 
@@ -569,9 +593,7 @@ return () => {
 import { lazy, Suspense } from "react";
 import { useEnableHeavyFx } from "@/hooks/use-enable-heavy-fx";
 
-const GridImpl = lazy(() =>
-  import("./GridShader.impl").then((m) => ({ default: m.GridImpl })),
-);
+const GridImpl = lazy(() => import("./GridShader.impl").then((m) => ({ default: m.GridImpl })));
 
 /** CSS mesh-gradient stand-in for the WebGL grid on low-power / mobile. */
 function GridFallback() {
@@ -615,6 +637,7 @@ git commit -m "perf: gate + lazy-load WebGL2 grid shader; pause RAF off-screen"
 ## Task 7: LazyVideo — WebM source + mobile poster-only
 
 **Files:**
+
 - Modify: `src/components/fx/LazyVideo.tsx`
 - Modify: `src/routes/index.tsx` (pass `srcWebm`)
 
@@ -710,6 +733,7 @@ export function LazyVideo({
 - [ ] **Step 2: Pass WebM sources in `index.tsx`**
 
 Find the two `LazyVideo` usages and add `srcWebm`:
+
 - `brasilia` block: add `srcWebm="/img/blue/brasilia.webm"` next to `src="/img/blue/brasilia.mp4"`.
 - `brasilnetwork` block: add `srcWebm="/img/blue/brasilnetwork.webm"` next to `src="/img/blue/brasilnetwork.mp4"`.
 
@@ -730,6 +754,7 @@ git commit -m "perf: LazyVideo serves WebM+MP4 and skips video entirely on mobil
 ## Task 8: Vite manual chunks + font weight trim
 
 **Files:**
+
 - Modify: `vite.config.ts`
 - Modify: `src/routes/__root.tsx` (fonts — only if audit shows unused weights)
 
@@ -831,6 +856,7 @@ git commit -m "chore: final verification pass"
 ## Task 11: DOX AGENTS.md hierarchy
 
 **Files:**
+
 - Create: `AGENTS.md` (root)
 - Create: `src/components/fx/AGENTS.md`
 
@@ -841,10 +867,11 @@ Follow the DOX shape from `Claude.md`. Sections: Purpose, Ownership, Local Contr
 - [ ] **Step 2: Write `src/components/fx/AGENTS.md`**
 
 Sections: Purpose (visual FX: shaders + video), Local Contracts:
-  - Every WebGL component is split into a light `*.tsx` gate (uses `useEnableHeavyFx`, renders a CSS fallback, `React.lazy`-loads the impl) and a heavy `*.impl.tsx`.
-  - Impl RAF loops MUST use `runManagedRaf` (`fx-lifecycle.ts`) so they pause off-screen and when the tab is hidden.
-  - `LazyVideo` renders poster-only on mobile/reduced-motion and serves WebM before MP4.
-Verification: build shows `three`/paper-design only in lazy chunks.
+
+- Every WebGL component is split into a light `*.tsx` gate (uses `useEnableHeavyFx`, renders a CSS fallback, `React.lazy`-loads the impl) and a heavy `*.impl.tsx`.
+- Impl RAF loops MUST use `runManagedRaf` (`fx-lifecycle.ts`) so they pause off-screen and when the tab is hidden.
+- `LazyVideo` renders poster-only on mobile/reduced-motion and serves WebM before MP4.
+  Verification: build shows `three`/paper-design only in lazy chunks.
 
 - [ ] **Step 3: Commit**
 

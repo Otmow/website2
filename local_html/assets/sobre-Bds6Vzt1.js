@@ -1,0 +1,344 @@
+import { j as e } from "./vendor-react-DLnSei1N.js";
+import { c as o, N as r, R as a, A as d, F as l } from "./FooterBlue-DXismSK9.js";
+import { D as n } from "./DottedSurfaceBlue-B-OwPgey.js";
+import { L as c, G as m } from "./GridShader-cLbM9S5E.js";
+import { C as i } from "./CountUp-CnNs-zEX.js";
+import { T as x } from "./trending-up-But44bYr.js";
+import "./index-pNzFXLul.js";
+const p = [
+    ["path", { d: "M3 3v16a2 2 0 0 0 2 2h16", key: "c24i48" }],
+    ["path", { d: "m19 9-5 5-4-4-3 3", key: "2osh9i" }],
+  ],
+  h = o("chart-line", p);
+const u = [
+    ["path", { d: "M15 18h-5", key: "95g1m2" }],
+    ["path", { d: "M18 14h-8", key: "sponae" }],
+    [
+      "path",
+      {
+        d: "M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2",
+        key: "39pd36",
+      },
+    ],
+    ["rect", { width: "8", height: "4", x: "10", y: "6", rx: "1", key: "aywv1n" }],
+  ],
+  f = o("newspaper", u);
+const j = [
+    ["path", { d: "M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5", key: "qeys4" }],
+    [
+      "path",
+      {
+        d: "M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09",
+        key: "u4xsad",
+      },
+    ],
+    [
+      "path",
+      {
+        d: "M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z",
+        key: "676m9",
+      },
+    ],
+    ["path", { d: "M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05", key: "92ym6u" }],
+  ],
+  b = o("rocket", j),
+  v = [
+    {
+      year: "2023",
+      title: "Fundação da Ótmow",
+      icon: b,
+      text: "A Ótmow nasce com o propósito de revolucionar o mercado financeiro voltado para licitações públicas, oferecendo soluções ágeis e transparentes em antecipação de recebíveis.",
+    },
+    {
+      year: "2024",
+      title: "Consolidação no mercado",
+      icon: x,
+      text: "Com o aporte inicial, a Ótmow acelerou o desenvolvimento de sua plataforma tecnológica, expandiu a equipe e consolidou sua presença no mercado, ainda como securitizadora.",
+    },
+    {
+      year: "2025 · 1º sem.",
+      title: "Rodadas de investimento",
+      icon: h,
+      text: "Consolidamos novas rodadas de captação, ampliamos nossa base de clientes e expandimos a presença em diferentes setores e regiões do Brasil.",
+    },
+    {
+      year: "2025 · 2º sem.",
+      title: "Lançamento do primeiro FIDC",
+      icon: c,
+      text: "Estruturamos e lançamos nosso primeiro Fundo de Investimento em Direitos Creditórios (FIDC), fortalecendo a transparência, a capacidade de operação e a confiança junto a clientes e investidores.",
+    },
+  ],
+  g = [
+    {
+      source: "Imprensa especializada",
+      title: "Ótmow busca R$ 100 mi para adiantar dinheiro a quem vende para o governo",
+    },
+    {
+      source: "Mercado financeiro",
+      title:
+        "Fechamento de mercado — impacto na Bolsa de Valores (IBOVESPA), valorização do Real e perspectivas para o mercado brasileiro",
+    },
+    {
+      source: "Mercado financeiro",
+      title:
+        "Abertura de mercado — Ata do COPOM, balanços corporativos e cenário macroeconômico no radar",
+    },
+  ];
+function z() {
+  return e.jsxs("div", {
+    className: "min-h-screen bg-[#060d1f] text-white",
+    children: [
+      e.jsx(r, {}),
+      e.jsxs("section", {
+        className: "relative overflow-hidden pb-20 pt-40 md:pb-28 md:pt-48",
+        children: [
+          e.jsx(n, { className: "opacity-60" }),
+          e.jsx("div", {
+            className: "absolute inset-0 bg-gradient-to-b from-transparent to-[#060d1f]",
+          }),
+          e.jsxs("div", {
+            className: "relative z-10 mx-auto max-w-5xl px-5 text-center md:px-8",
+            children: [
+              e.jsx(a, {
+                children: e.jsx("span", {
+                  className: "text-xs font-semibold uppercase tracking-[0.25em] text-[#4EB7FF]",
+                  children: "Sobre a Ótmow",
+                }),
+              }),
+              e.jsx(a, {
+                delay: 100,
+                children: e.jsxs("h1", {
+                  className:
+                    "mt-5 font-display text-balance text-4xl font-bold leading-[1.08] md:text-6xl",
+                  children: [
+                    "Transformamos recebíveis públicos em",
+                    " ",
+                    e.jsx("span", { className: "gradient-text-blue", children: "oportunidades" }),
+                  ],
+                }),
+              }),
+              e.jsx(a, {
+                delay: 220,
+                children: e.jsx("p", {
+                  className:
+                    "mx-auto mt-7 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg",
+                  children:
+                    "Com tecnologia própria, agilidade e segurança, viabilizamos capital para empresas que vendem para o governo, transformando notas fiscais em liquidez imediata — sem exigência de garantias reais e com análise rápida.",
+                }),
+              }),
+            ],
+          }),
+        ],
+      }),
+      e.jsx("section", {
+        className: "relative bg-[#081127] py-24 md:py-32",
+        children: e.jsxs("div", {
+          className: "mx-auto max-w-7xl px-5 md:px-8",
+          children: [
+            e.jsx(a, {
+              children: e.jsxs("div", {
+                className: "mx-auto max-w-2xl text-center",
+                children: [
+                  e.jsx("h2", {
+                    className: "font-display text-balance text-3xl font-bold md:text-5xl",
+                    children: "Nossa trajetória de crescimento",
+                  }),
+                  e.jsx("p", {
+                    className: "mt-5 text-base text-slate-300",
+                    children:
+                      "Cada conquista representa um passo estratégico na missão de transformar o acesso a crédito para fornecedores do setor público.",
+                  }),
+                ],
+              }),
+            }),
+            e.jsxs("div", {
+              className: "relative mt-16",
+              children: [
+                e.jsx("div", {
+                  className:
+                    "absolute left-5 top-0 hidden h-full w-px bg-gradient-to-b from-[#4EB7FF]/70 via-[#3674EF]/45 to-transparent md:left-1/2 md:block",
+                }),
+                e.jsx("div", {
+                  className: "space-y-10 md:space-y-16",
+                  children: v.map((s, t) =>
+                    e.jsx(
+                      a,
+                      {
+                        delay: t * 100,
+                        children: e.jsxs("div", {
+                          className: `flex flex-col gap-4 md:flex-row md:items-center md:gap-12 ${t % 2 === 1 ? "md:flex-row-reverse" : ""}`,
+                          children: [
+                            e.jsx("div", {
+                              className: "md:w-1/2",
+                              children: e.jsxs("div", {
+                                className: `rounded-2xl border border-white/10 bg-white/[0.04] p-7 transition-colors hover:border-[#3674EF]/45 ${t % 2 === 1 ? "md:ml-12" : "md:mr-12"}`,
+                                children: [
+                                  e.jsxs("div", {
+                                    className: "flex items-center gap-3",
+                                    children: [
+                                      e.jsx(s.icon, { className: "size-6 text-[#4EB7FF]" }),
+                                      e.jsx("span", {
+                                        className:
+                                          "font-display text-sm font-bold uppercase tracking-wider text-[#4EB7FF]",
+                                        children: s.year,
+                                      }),
+                                    ],
+                                  }),
+                                  e.jsx("h3", {
+                                    className: "mt-3 font-display text-xl font-semibold",
+                                    children: s.title,
+                                  }),
+                                  e.jsx("p", {
+                                    className: "mt-3 text-sm leading-relaxed text-slate-400",
+                                    children: s.text,
+                                  }),
+                                ],
+                              }),
+                            }),
+                            e.jsx("div", {
+                              className:
+                                "hidden size-3 shrink-0 rounded-full bg-[#3674EF] ring-4 ring-[#3674EF]/25 md:block",
+                            }),
+                            e.jsx("div", { className: "hidden md:block md:w-1/2" }),
+                          ],
+                        }),
+                      },
+                      s.year,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+          ],
+        }),
+      }),
+      e.jsxs("section", {
+        className: "relative overflow-hidden py-24 md:py-32",
+        children: [
+          e.jsx(m, {}),
+          e.jsx("div", { className: "absolute inset-0 bg-[#060d1f]/35" }),
+          e.jsxs("div", {
+            className: "relative z-10 mx-auto max-w-7xl px-5 md:px-8",
+            children: [
+              e.jsx(a, {
+                children: e.jsx("div", {
+                  className: "mx-auto max-w-2xl text-center",
+                  children: e.jsx("h2", {
+                    className: "font-display text-balance text-3xl font-bold md:text-5xl",
+                    children: "Um mercado sólido, um futuro promissor",
+                  }),
+                }),
+              }),
+              e.jsxs("div", {
+                className: "mt-14 grid gap-6 md:grid-cols-2",
+                children: [
+                  e.jsx(a, {
+                    children: e.jsxs("div", {
+                      className: "glass h-full rounded-2xl p-10",
+                      children: [
+                        e.jsxs("p", {
+                          className: "font-display text-5xl font-bold text-[#4EB7FF] md:text-6xl",
+                          children: [
+                            "R$ ",
+                            e.jsx(i, { end: 1.3, decimals: 1, duration: 2400 }),
+                            " tri",
+                          ],
+                        }),
+                        e.jsx("p", {
+                          className: "mt-4 text-base leading-relaxed text-slate-200",
+                          children:
+                            "O setor público brasileiro é o maior comprador da América Latina, movimentando mais de R$ 1,3 trilhão por ano em contratações de obras, serviços e fornecimento de bens.",
+                        }),
+                      ],
+                    }),
+                  }),
+                  e.jsx(a, {
+                    delay: 140,
+                    children: e.jsxs("div", {
+                      className: "glass h-full rounded-2xl p-10",
+                      children: [
+                        e.jsxs("p", {
+                          className: "font-display text-5xl font-bold text-white md:text-6xl",
+                          children: ["+", e.jsx(i, { end: 160, duration: 2400 })],
+                        }),
+                        e.jsx("p", {
+                          className: "mt-4 text-base leading-relaxed text-slate-200",
+                          children:
+                            "Já analisamos mais de 160 órgãos públicos em todo o Brasil, reunindo dados estratégicos sobre licitações, contratos e prazos de pagamento.",
+                        }),
+                      ],
+                    }),
+                  }),
+                ],
+              }),
+            ],
+          }),
+        ],
+      }),
+      e.jsx("section", {
+        className: "relative bg-[#081127] py-24 md:py-32",
+        children: e.jsxs("div", {
+          className: "mx-auto max-w-7xl px-5 md:px-8",
+          children: [
+            e.jsx(a, {
+              children: e.jsxs("div", {
+                className: "mx-auto max-w-2xl text-center",
+                children: [
+                  e.jsx("span", {
+                    className: "text-xs font-semibold uppercase tracking-[0.25em] text-[#4EB7FF]",
+                    children: "Ótmow na mídia",
+                  }),
+                  e.jsx("h2", {
+                    className: "mt-4 font-display text-balance text-3xl font-bold md:text-5xl",
+                    children: "Reconhecimento que reforça a confiança",
+                  }),
+                  e.jsx("p", {
+                    className: "mt-5 text-base text-slate-300",
+                    children:
+                      "Nossas conquistas e iniciativas têm ganhado destaque em veículos de comunicação e canais especializados do mercado financeiro.",
+                  }),
+                ],
+              }),
+            }),
+            e.jsx("div", {
+              className: "mt-14 grid gap-5 md:grid-cols-3",
+              children: g.map((s, t) =>
+                e.jsx(
+                  a,
+                  {
+                    delay: t * 120,
+                    children: e.jsxs("div", {
+                      className:
+                        "group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-7 transition-all hover:border-[#3674EF]/45 hover:bg-white/[0.06]",
+                      children: [
+                        e.jsx(f, { className: "size-6 text-[#4EB7FF]" }),
+                        e.jsx("span", {
+                          className:
+                            "mt-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500",
+                          children: s.source,
+                        }),
+                        e.jsx("h3", {
+                          className:
+                            "mt-2 flex-1 font-display text-lg font-semibold leading-snug text-white",
+                          children: s.title,
+                        }),
+                        e.jsxs("span", {
+                          className:
+                            "mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#4EB7FF]",
+                          children: ["Ver cobertura ", e.jsx(d, { className: "size-3.5" })],
+                        }),
+                      ],
+                    }),
+                  },
+                  s.title,
+                ),
+              ),
+            }),
+          ],
+        }),
+      }),
+      e.jsx(l, {}),
+    ],
+  });
+}
+export { z as component };

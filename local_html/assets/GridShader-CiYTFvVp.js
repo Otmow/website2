@@ -1,0 +1,49 @@
+const __vite__mapDeps = (
+  i,
+  m = __vite__mapDeps,
+  d = m.f ||
+    (m.f = [
+      "assets/GridShader.impl-BQk3giz7.js",
+      "assets/vendor-react-DLnSei1N.js",
+      "assets/fx-lifecycle-C5H1zH4y.js",
+    ]),
+) => i.map((i) => d[i]);
+import { c as s, _ as d } from "./index-CqBNPuiB.js";
+import { j as a, r } from "./vendor-react-DLnSei1N.js";
+import { b as n } from "./FooterBlue-C091Jo7C.js";
+const o = [
+    ["path", { d: "M10 18v-7", key: "wt116b" }],
+    [
+      "path",
+      {
+        d: "M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z",
+        key: "1m329m",
+      },
+    ],
+    ["path", { d: "M14 18v-7", key: "vav6t3" }],
+    ["path", { d: "M18 18v-7", key: "aexdmj" }],
+    ["path", { d: "M3 22h18", key: "8prr45" }],
+    ["path", { d: "M6 18v-7", key: "1ivflk" }],
+  ],
+  h = s("landmark", o),
+  i = r.lazy(() =>
+    d(() => import("./GridShader.impl-BQk3giz7.js"), __vite__mapDeps([0, 1, 2])).then((e) => ({
+      default: e.GridImpl,
+    })),
+  );
+function t() {
+  return a.jsx("div", {
+    style: {
+      position: "absolute",
+      inset: 0,
+      background:
+        "radial-gradient(120% 120% at 20% 10%, hsl(222,70%,12%) 0%, hsl(224,75%,8%) 60%, hsl(222,80%,6%) 100%)",
+    },
+  });
+}
+function u({ pixelRatio: e }) {
+  return n()
+    ? a.jsx(r.Suspense, { fallback: a.jsx(t, {}), children: a.jsx(i, { pixelRatio: e }) })
+    : a.jsx(t, {});
+}
+export { u as G, h as L };

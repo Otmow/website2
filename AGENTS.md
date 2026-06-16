@@ -46,7 +46,7 @@ child docs (see index).
 
 - `npm run build` — must succeed; confirm `three`/`@paper-design` stay in lazy
   chunks and `vendor-react-*.js` is split out.
-- `npm run lint` — must exit 0 (pre-existing `react-refresh` *warnings* in
+- `npm run lint` — must exit 0 (pre-existing `react-refresh` _warnings_ in
   `src/components/ui/*` are acceptable; errors are not).
 - Responsive/visual pass at 375 / 768 / 1280 px (browser harness) on all routes.
 

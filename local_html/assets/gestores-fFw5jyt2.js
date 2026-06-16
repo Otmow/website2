@@ -1,0 +1,514 @@
+import { j as e } from "./vendor-react-DLnSei1N.js";
+import { c as t, N as c, W as d, R as s, A as o, F as l } from "./FooterBlue-DXismSK9.js";
+import { L as m, G as x } from "./GridShader-cLbM9S5E.js";
+import { S as r } from "./shield-check-9S1Mk0kz.js";
+import "./index-pNzFXLul.js";
+const p = [
+    ["path", { d: "M3 3v16a2 2 0 0 0 2 2h16", key: "c24i48" }],
+    ["path", { d: "M18 17V9", key: "2bz60n" }],
+    ["path", { d: "M13 17V5", key: "1frdt8" }],
+    ["path", { d: "M8 17v-3", key: "17ska0" }],
+  ],
+  h = t("chart-column", p);
+const u = [
+    ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+    ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }],
+  ],
+  j = t("circle-check", u);
+const g = [
+    ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+    ["path", { d: "M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8", key: "1h4pet" }],
+    ["path", { d: "M12 18V6", key: "zqpxq5" }],
+  ],
+  y = t("circle-dollar-sign", g);
+const f = [
+    [
+      "path",
+      {
+        d: "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z",
+        key: "1oefj6",
+      },
+    ],
+    ["path", { d: "M14 2v5a1 1 0 0 0 1 1h5", key: "wfsgrz" }],
+    ["path", { d: "m9 15 2 2 4-4", key: "1grp1n" }],
+  ],
+  v = t("file-check", f);
+const b = [
+    [
+      "path",
+      {
+        d: "M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z",
+        key: "j76jl0",
+      },
+    ],
+    ["path", { d: "M22 10v6", key: "1lu8f3" }],
+    ["path", { d: "M6 12.5V16a6 3 0 0 0 12 0v-3.5", key: "1r8lef" }],
+  ],
+  N = t("graduation-cap", b);
+const k = [
+    ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+    ["path", { d: "m4.93 4.93 4.24 4.24", key: "1ymg45" }],
+    ["path", { d: "m14.83 9.17 4.24-4.24", key: "1cb5xl" }],
+    ["path", { d: "m14.83 14.83 4.24 4.24", key: "q42g0n" }],
+    ["path", { d: "m9.17 14.83-4.24 4.24", key: "bqpfvv" }],
+    ["circle", { cx: "12", cy: "12", r: "4", key: "4exip2" }],
+  ],
+  w = t("life-buoy", k);
+const F = [
+    [
+      "path",
+      {
+        d: "M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z",
+        key: "q8bfy3",
+      },
+    ],
+    ["path", { d: "M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14", key: "1853fq" }],
+    ["path", { d: "M8 6v8", key: "15ugcq" }],
+  ],
+  M = t("megaphone", F);
+const z = [
+    ["path", { d: "M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8", key: "14sxne" }],
+    ["path", { d: "M3 3v5h5", key: "1xhq8a" }],
+    ["path", { d: "M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16", key: "1hlbsb" }],
+    ["path", { d: "M16 16h5v5", key: "ccwih5" }],
+  ],
+  n = t("refresh-ccw", z);
+const _ = [
+    ["path", { d: "M12 3v18", key: "108xh3" }],
+    ["path", { d: "m19 8 3 8a5 5 0 0 1-6 0zV7", key: "zcdpyk" }],
+    ["path", { d: "M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1", key: "1yorad" }],
+    ["path", { d: "m5 8 3 8a5 5 0 0 1-6 0zV7", key: "eua70x" }],
+    ["path", { d: "M7 21h10", key: "1b0cd5" }],
+  ],
+  C = t("scale", _);
+const E = [
+    ["path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2", key: "1yyitq" }],
+    ["circle", { cx: "9", cy: "7", r: "4", key: "nufk8" }],
+    ["line", { x1: "19", x2: "19", y1: "8", y2: "14", key: "1bvyxn" }],
+    ["line", { x1: "22", x2: "16", y1: "11", y2: "11", key: "1shjgl" }],
+  ],
+  q = t("user-plus", E),
+  B = [
+    { n: "1", icon: q, t: "Cadastro", d: "Validação de perfil e compliance." },
+    { n: "2", icon: N, t: "Treinamento", d: "Imersão rápida na tese e materiais." },
+    { n: "3", icon: M, t: "Apoio estratégico", d: "Materiais exclusivos e suporte técnico." },
+    { n: "4", icon: h, t: "Distribuição", d: "Prospecção e fechamento com apoio." },
+    { n: "5", icon: n, t: "Comissão", d: "Recorrência e acompanhamento." },
+  ],
+  R = [
+    {
+      icon: r,
+      t: "Risco de crédito / atraso",
+      d: "Mitigado por diligência prévia rigorosa, critérios de elegibilidade restritivos e monitoramento constante da capacidade de pagamento.",
+    },
+    {
+      icon: C,
+      t: "Risco jurídico / documental",
+      d: "Auditoria completa do processo de originação, garantindo que o lastro seja válido, existente e cedível.",
+    },
+    {
+      icon: v,
+      t: "Risco de liquidez",
+      d: "Por ser um ativo privado, a liquidez pode ser limitada. O alinhamento do prazo do investimento com o objetivo do cliente é essencial.",
+    },
+  ];
+function S() {
+  return e.jsxs("div", {
+    className: "min-h-screen bg-[#060d1f] text-white",
+    children: [
+      e.jsx(c, {}),
+      e.jsxs("section", {
+        className: "relative overflow-hidden",
+        children: [
+          e.jsx(d, { speed: 0.6 }),
+          e.jsx("div", {
+            className: "absolute inset-0 bg-gradient-to-b from-[#040a1c]/50 to-[#060d1f]",
+          }),
+          e.jsx("div", {
+            className: "relative z-10 mx-auto max-w-7xl px-5 pb-24 pt-44 md:px-8 md:pb-32 md:pt-52",
+            children: e.jsxs("div", {
+              className: "grid items-center gap-12 lg:grid-cols-2",
+              children: [
+                e.jsxs("div", {
+                  children: [
+                    e.jsx(s, {
+                      children: e.jsx("span", {
+                        className:
+                          "glass inline-flex rounded-full px-4 py-2 text-xs font-medium tracking-wide text-[#7cc6ff]",
+                        children: "Gestores de relacionamento · Distribuição de FIDC",
+                      }),
+                    }),
+                    e.jsx(s, {
+                      delay: 120,
+                      children: e.jsxs("h1", {
+                        className:
+                          "mt-7 font-display text-balance text-4xl font-bold leading-[1.08] md:text-6xl",
+                        children: [
+                          "Traga investidores para o nosso FIDC e construa",
+                          " ",
+                          e.jsx("span", {
+                            className: "gradient-text-blue",
+                            children: "receita recorrente",
+                          }),
+                        ],
+                      }),
+                    }),
+                    e.jsx(s, {
+                      delay: 240,
+                      children: e.jsx("p", {
+                        className:
+                          "mt-7 max-w-xl text-base leading-relaxed text-slate-100/90 md:text-lg",
+                        children:
+                          "Seu papel é originar e manter investidores; o nosso é estruturar o ativo. Eles aportam na cota subordinada do FIDC da Ótmow — renda fixa com risco soberano, lastreada em recebíveis de entes públicos — enquanto cuidamos da diligência, da governança e do monitoramento.",
+                      }),
+                    }),
+                    e.jsx(s, {
+                      delay: 340,
+                      children: e.jsx("ul", {
+                        className: "mt-7 space-y-3",
+                        children: [
+                          "Comissão recorrente baseada no AUM, enquanto o investidor permanece alocado",
+                          "Ativo de renda fixa com risco soberano, lastreado em recebíveis públicos",
+                          "Estrutura robusta de FIDC, com auditoria de lastro e governança",
+                        ].map((a) =>
+                          e.jsxs(
+                            "li",
+                            {
+                              className: "flex items-start gap-3 text-sm text-slate-200",
+                              children: [
+                                e.jsx(j, { className: "mt-0.5 size-5 shrink-0 text-[#4EB7FF]" }),
+                                a,
+                              ],
+                            },
+                            a,
+                          ),
+                        ),
+                      }),
+                    }),
+                    e.jsx(s, {
+                      delay: 440,
+                      children: e.jsxs("a", {
+                        href: "https://wa.me/+5511973106054",
+                        target: "_blank",
+                        rel: "noreferrer",
+                        className:
+                          "group mt-9 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[#06122b] transition-transform duration-300 hover:scale-105",
+                        children: [
+                          "Quero me credenciar",
+                          e.jsx(o, {
+                            className:
+                              "size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5",
+                          }),
+                        ],
+                      }),
+                    }),
+                  ],
+                }),
+                e.jsx(s, {
+                  delay: 300,
+                  children: e.jsxs("div", {
+                    className: "glass rounded-2xl p-7",
+                    children: [
+                      e.jsxs("div", {
+                        className: "flex items-center justify-between",
+                        children: [
+                          e.jsx("p", {
+                            className: "font-display text-sm font-semibold text-white",
+                            children: "Carteira Ótmow",
+                          }),
+                          e.jsxs("span", {
+                            className: "flex items-center gap-1.5 text-[11px] text-[#4EB7FF]",
+                            children: [
+                              e.jsx("span", {
+                                className: "size-1.5 animate-pulse rounded-full bg-[#3674EF]",
+                              }),
+                              "Tempo real",
+                            ],
+                          }),
+                        ],
+                      }),
+                      e.jsxs("div", {
+                        className: "mt-5 space-y-3",
+                        children: [
+                          e.jsx("div", {
+                            className: "rounded-xl border border-white/10 bg-white/[0.05] p-4",
+                            children: e.jsxs("div", {
+                              className: "flex items-center justify-between",
+                              children: [
+                                e.jsxs("div", {
+                                  children: [
+                                    e.jsx("p", {
+                                      className: "text-xs font-medium text-white",
+                                      children: "Liquidação Recebível #8492",
+                                    }),
+                                    e.jsx("p", {
+                                      className: "mt-0.5 text-[11px] text-slate-400",
+                                      children: "Ente público · Pgto confirmado",
+                                    }),
+                                  ],
+                                }),
+                                e.jsx("p", {
+                                  className: "font-display text-sm font-bold text-[#4EB7FF]",
+                                  children: "+ R$ 142.500",
+                                }),
+                              ],
+                            }),
+                          }),
+                          e.jsx("div", {
+                            className: "rounded-xl border border-white/10 bg-white/[0.05] p-4",
+                            children: e.jsxs("div", {
+                              className: "flex items-center justify-between",
+                              children: [
+                                e.jsxs("div", {
+                                  children: [
+                                    e.jsx("p", {
+                                      className: "text-xs font-medium text-white",
+                                      children: "Comissão recorrente",
+                                    }),
+                                    e.jsx("p", {
+                                      className: "mt-0.5 text-[11px] text-slate-400",
+                                      children: "Carteira Gestor #12",
+                                    }),
+                                  ],
+                                }),
+                                e.jsx(n, {
+                                  className:
+                                    "size-4 animate-spin text-[#4EB7FF] [animation-duration:3s]",
+                                }),
+                              ],
+                            }),
+                          }),
+                          e.jsxs("div", {
+                            className: "rounded-xl border border-[#3674EF]/30 bg-[#3674EF]/15 p-4",
+                            children: [
+                              e.jsx("p", {
+                                className: "text-[11px] uppercase tracking-wider text-[#7cc6ff]",
+                                children: "Já captados",
+                              }),
+                              e.jsx("p", {
+                                className: "mt-1 font-display text-2xl font-bold text-white",
+                                children: "+ R$ 20 milhões",
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            }),
+          }),
+        ],
+      }),
+      e.jsx("section", {
+        className: "bg-[#081127] py-24 md:py-32",
+        children: e.jsxs("div", {
+          className: "mx-auto max-w-7xl px-5 md:px-8",
+          children: [
+            e.jsx(s, {
+              children: e.jsxs("div", {
+                className: "mx-auto max-w-3xl text-center",
+                children: [
+                  e.jsxs("h2", {
+                    className: "font-display text-balance text-3xl font-bold md:text-5xl",
+                    children: [
+                      "Sua autoridade no relacionamento.",
+                      " ",
+                      e.jsx("span", {
+                        className: "text-[#4EB7FF]",
+                        children: "Nossa excelência em ativos estruturados.",
+                      }),
+                    ],
+                  }),
+                  e.jsx("p", {
+                    className: "mt-5 text-base text-slate-300",
+                    children:
+                      "Proporcionamos a inteligência de mercado e o suporte operacional para que sua única preocupação seja o crescimento da sua rede.",
+                  }),
+                ],
+              }),
+            }),
+            e.jsx("div", {
+              className: "mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4",
+              children: [
+                {
+                  icon: y,
+                  t: "Fluxo de caixa recorrente",
+                  d: "Remuneração contínua baseada no AUM, garantindo previsibilidade enquanto o investidor permanece alocado.",
+                },
+                {
+                  icon: m,
+                  t: "Resiliência soberana",
+                  d: "Ativos lastreados em recebíveis de entes públicos, com camada de proteção institucional superior ao crédito privado convencional.",
+                },
+                {
+                  icon: w,
+                  t: "Suporte institucional",
+                  d: "Acompanhamento técnico em apresentações estratégicas, back-office dedicado e materiais de apoio de alta conversão.",
+                },
+                {
+                  icon: r,
+                  t: "Governança e compliance",
+                  d: "Relatórios detalhados e total transparência sobre a origem e auditoria dos ativos.",
+                },
+              ].map((a, i) =>
+                e.jsx(
+                  s,
+                  {
+                    delay: i * 100,
+                    children: e.jsxs("div", {
+                      className:
+                        "h-full rounded-2xl border border-white/10 bg-white/[0.03] p-7 transition-all hover:border-[#3674EF]/45 hover:bg-white/[0.06]",
+                      children: [
+                        e.jsx(a.icon, { className: "size-7 text-[#4EB7FF]" }),
+                        e.jsx("h3", {
+                          className: "mt-4 font-display text-lg font-semibold",
+                          children: a.t,
+                        }),
+                        e.jsx("p", {
+                          className: "mt-2 text-sm leading-relaxed text-slate-400",
+                          children: a.d,
+                        }),
+                      ],
+                    }),
+                  },
+                  a.t,
+                ),
+              ),
+            }),
+          ],
+        }),
+      }),
+      e.jsxs("section", {
+        className: "relative overflow-hidden py-24 md:py-32",
+        children: [
+          e.jsx(x, {}),
+          e.jsx("div", { className: "absolute inset-0 bg-[#060d1f]/40" }),
+          e.jsxs("div", {
+            className: "relative z-10 mx-auto max-w-7xl px-5 md:px-8",
+            children: [
+              e.jsx(s, {
+                children: e.jsxs("div", {
+                  className: "mx-auto max-w-2xl text-center",
+                  children: [
+                    e.jsx("h2", {
+                      className: "font-display text-balance text-3xl font-bold md:text-5xl",
+                      children: "Do credenciamento à receita recorrente",
+                    }),
+                    e.jsx("p", {
+                      className: "mt-5 text-base text-slate-200",
+                      children: "Um ecossistema de alta performance em cinco etapas.",
+                    }),
+                  ],
+                }),
+              }),
+              e.jsx("div", {
+                className: "mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-5",
+                children: B.map((a, i) =>
+                  e.jsx(
+                    s,
+                    {
+                      delay: i * 90,
+                      children: e.jsxs("div", {
+                        className: "glass h-full rounded-2xl p-6 text-center",
+                        children: [
+                          e.jsx("span", {
+                            className:
+                              "font-display mx-auto flex size-9 items-center justify-center rounded-full bg-[#3674EF] text-sm font-bold text-white",
+                            children: a.n,
+                          }),
+                          e.jsx(a.icon, { className: "mx-auto mt-4 size-6 text-[#4EB7FF]" }),
+                          e.jsx("h3", {
+                            className: "mt-3 text-sm font-semibold text-white",
+                            children: a.t,
+                          }),
+                          e.jsx("p", {
+                            className: "mt-1.5 text-xs leading-relaxed text-slate-300",
+                            children: a.d,
+                          }),
+                        ],
+                      }),
+                    },
+                    a.n,
+                  ),
+                ),
+              }),
+            ],
+          }),
+        ],
+      }),
+      e.jsx("section", {
+        className: "bg-[#081127] py-24 md:py-32",
+        children: e.jsxs("div", {
+          className: "mx-auto max-w-7xl px-5 md:px-8",
+          children: [
+            e.jsx(s, {
+              children: e.jsxs("div", {
+                className: "mx-auto max-w-2xl text-center",
+                children: [
+                  e.jsx("span", {
+                    className: "text-xs font-semibold uppercase tracking-[0.25em] text-[#4EB7FF]",
+                    children: "Transparência",
+                  }),
+                  e.jsx("h2", {
+                    className: "mt-4 font-display text-balance text-3xl font-bold md:text-5xl",
+                    children: "Medimos, mitigamos e monitoramos",
+                  }),
+                ],
+              }),
+            }),
+            e.jsx("div", {
+              className: "mt-14 grid gap-5 md:grid-cols-3",
+              children: R.map((a, i) =>
+                e.jsx(
+                  s,
+                  {
+                    delay: i * 120,
+                    children: e.jsxs("div", {
+                      className: "h-full rounded-2xl border border-white/10 bg-white/[0.03] p-7",
+                      children: [
+                        e.jsx(a.icon, { className: "size-6 text-[#4EB7FF]" }),
+                        e.jsx("h3", {
+                          className: "mt-4 font-display text-lg font-semibold",
+                          children: a.t,
+                        }),
+                        e.jsx("p", {
+                          className: "mt-3 text-sm leading-relaxed text-slate-400",
+                          children: a.d,
+                        }),
+                      ],
+                    }),
+                  },
+                  a.t,
+                ),
+              ),
+            }),
+            e.jsx(s, {
+              delay: 200,
+              children: e.jsx("div", {
+                className: "mt-14 text-center",
+                children: e.jsxs("a", {
+                  href: "https://wa.me/+5511973106054",
+                  target: "_blank",
+                  rel: "noreferrer",
+                  className:
+                    "group inline-flex items-center gap-2 rounded-full bg-[#3674EF] px-8 py-4 text-sm font-semibold text-white transition-transform duration-300 hover:scale-105",
+                  children: [
+                    "Acessar proposta comercial personalizada",
+                    e.jsx(o, {
+                      className:
+                        "size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5",
+                    }),
+                  ],
+                }),
+              }),
+            }),
+          ],
+        }),
+      }),
+      e.jsx(l, {}),
+    ],
+  });
+}
+export { S as component };

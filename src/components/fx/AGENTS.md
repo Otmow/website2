@@ -52,6 +52,7 @@ preference and `hardwareConcurrency >= 4`. By default it is also false on mobile
 ### LazyVideo media contract
 
 `LazyVideo` (`LazyVideo.tsx`):
+
 - SSR-renders the poster `<img>` (no layout shift; `width`/`height` required).
 - Mounts `<video preload="none">` only near the viewport (IntersectionObserver).
 - Renders **poster only** (never downloads video) on mobile or reduced-motion.
