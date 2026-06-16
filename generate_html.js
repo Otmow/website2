@@ -46,7 +46,7 @@ async function run() {
   for (const r of routes) {
     console.log(`Fetching page: ${r.path}...`);
     // Create a mock request object. Cloudflare Worker expects standard Request object.
-    const request = new Request(`http://localhost/website2${r.path === "/" ? "" : r.path}`);
+    const request = new Request(`http://localhost/website2${r.path === "/" ? "/" : r.path}`);
 
     try {
       const response = await server.fetch(request);
@@ -55,7 +55,11 @@ async function run() {
         continue;
       }
 
-      const html = await response.text();
+      let html = await response.text();
+      
+      // Fix paths for GitHub Pages sub-directory
+      html = html.replace(/"\/assets\//g, '"/website2/assets/');
+      html = html.replace(/"\/img\//g, '"/website2/img/');
 
       // Save as filename.html
       const mainPath = path.join(OUT_DIR, r.file);
