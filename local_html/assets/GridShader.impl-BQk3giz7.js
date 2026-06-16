@@ -1,6 +1,4 @@
-import { r as h, j as F } from "./vendor-react-DLnSei1N.js";
-import { r as V } from "./fx-lifecycle-C5H1zH4y.js";
-const O = `#version 300 es
+import{r as h,j as F}from"./vendor-react-DLnSei1N.js";import{r as V}from"./fx-lifecycle-C5H1zH4y.js";const O=`#version 300 es
 precision highp float;
 
 out vec4 fragColor;
@@ -153,8 +151,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 }
 
 void main(){ mainImage(fragColor, gl_FragCoord.xy); }
-`,
-  U = `#version 300 es
+`,U=`#version 300 es
 precision highp float;
 layout(location=0) in vec2 a_pos;
 out vec2 v_uv;
@@ -162,150 +159,4 @@ void main(){
   v_uv = a_pos * 0.5 + 0.5;
   gl_Position = vec4(a_pos, 0.0, 1.0);
 }
-`;
-function H(t, c, u) {
-  const a = t.createShader(c);
-  (t.shaderSource(a, u), t.compileShader(a));
-  const f = t.getShaderParameter(a, t.COMPILE_STATUS),
-    o = t.getShaderInfoLog(a) || "";
-  return { shader: f ? a : null, log: o };
-}
-function Y(t, c, u) {
-  const a = t.createProgram();
-  (t.attachShader(a, c), t.attachShader(a, u), t.linkProgram(a));
-  const f = t.getProgramParameter(a, t.LINK_STATUS),
-    o = t.getProgramInfoLog(a) || "";
-  return { program: f ? a : null, log: o };
-}
-function x(t, c) {
-  (console.error(c),
-    t.bindFramebuffer(t.FRAMEBUFFER, null),
-    t.clearColor(0.02, 0.04, 0.1, 1),
-    t.clear(t.COLOR_BUFFER_BIT));
-}
-function X({ pixelRatio: t }) {
-  const c = h.useRef(null),
-    u = h.useRef(0),
-    a = h.useRef(0),
-    f = h.useRef({ x: 0, y: 0, l: 0, r: 0 });
-  return (
-    h.useEffect(() => {
-      const o = c.current,
-        e = o.getContext("webgl2", { premultipliedAlpha: !1 });
-      if (!e) return;
-      let R = !1,
-        n = null,
-        m = null,
-        l = null,
-        d = null,
-        g = !1;
-      const T = (i) => {
-          const s = o.getBoundingClientRect(),
-            r = i.clientX - s.left,
-            v = i.clientY - s.top;
-          ((f.current.x = Math.max(0, Math.min(r, s.width))),
-            (f.current.y = Math.max(0, Math.min(s.height - v, s.height))));
-        },
-        I = () => {
-          const i = window.devicePixelRatio || 1;
-          return Math.max(1, Math.min(2, t ?? i));
-        };
-      function M() {
-        if (((g = !1), R)) return;
-        const i = I(),
-          s = Math.max(1, o.clientWidth | 0),
-          r = Math.max(1, o.clientHeight | 0),
-          v = Math.max(1, Math.floor(s * i)),
-          p = Math.max(1, Math.floor(r * i));
-        (o.width !== v || o.height !== p) &&
-          ((o.width = v), (o.height = p), e.viewport(0, 0, v, p));
-      }
-      function y() {
-        g || ((g = !0), requestAnimationFrame(M));
-      }
-      if (((n = e.createVertexArray()), (m = e.createBuffer()), !n || !m)) return;
-      (e.bindVertexArray(n),
-        e.bindBuffer(e.ARRAY_BUFFER, m),
-        e.bufferData(e.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), e.STATIC_DRAW),
-        e.enableVertexAttribArray(0),
-        e.vertexAttribPointer(0, 2, e.FLOAT, !1, 0, 0));
-      const S = () => {
-          (e.deleteVertexArray(n), e.deleteBuffer(m), (n = null), (m = null));
-        },
-        { shader: A, log: G } = H(e, e.VERTEX_SHADER, U);
-      if (!A) {
-        (x(e, G), S());
-        return;
-      }
-      const { shader: E, log: j } = H(e, e.FRAGMENT_SHADER, O);
-      if (!E) {
-        (x(e, j), e.deleteShader(A), S());
-        return;
-      }
-      const _ = Y(e, A, E);
-      if ((e.deleteShader(A), e.deleteShader(E), !_.program)) {
-        (x(e, _.log), S());
-        return;
-      }
-      l = _.program;
-      const L = e.getUniformLocation(l, "iResolution"),
-        C = e.getUniformLocation(l, "iTime"),
-        b = e.getUniformLocation(l, "iFrame"),
-        D = e.getUniformLocation(l, "iMouse");
-      ((d = new ResizeObserver(y)),
-        d.observe(o),
-        y(),
-        o.addEventListener("mousemove", T),
-        (u.current = performance.now()),
-        (a.current = 0));
-      const P = V(o, (i) => {
-        if (R || e.isContextLost()) return;
-        const s = (i - u.current) / 1e3;
-        a.current += 1;
-        try {
-          (e.useProgram(l), g && M());
-          const r = I(),
-            v = o.width,
-            p = o.height;
-          if (
-            (L && e.uniform3f(L, v, p, r),
-            C && e.uniform1f(C, s),
-            b && e.uniform1i(b, a.current),
-            D)
-          ) {
-            const w = f.current;
-            e.uniform4f(D, w.x * r, w.y * r, w.l, w.r);
-          }
-          (e.bindVertexArray(n), e.drawArrays(e.TRIANGLES, 0, 3));
-        } catch (r) {
-          x(e, r?.message ?? String(r));
-        }
-      });
-      return () => {
-        if (((R = !0), P(), o.removeEventListener("mousemove", T), d)) {
-          try {
-            d.disconnect();
-          } catch {}
-          d = null;
-        }
-        try {
-          m && e.deleteBuffer(m);
-        } catch {}
-        try {
-          n && e.deleteVertexArray(n);
-        } catch {}
-        try {
-          l && e.deleteProgram(l);
-        } catch {}
-      };
-    }, [t]),
-    F.jsx("div", {
-      style: { position: "absolute", inset: 0 },
-      children: F.jsx("canvas", {
-        ref: c,
-        style: { width: "100%", height: "100%", display: "block" },
-      }),
-    })
-  );
-}
-export { X as GridImpl };
+`;function H(t,c,u){const a=t.createShader(c);t.shaderSource(a,u),t.compileShader(a);const f=t.getShaderParameter(a,t.COMPILE_STATUS),o=t.getShaderInfoLog(a)||"";return{shader:f?a:null,log:o}}function Y(t,c,u){const a=t.createProgram();t.attachShader(a,c),t.attachShader(a,u),t.linkProgram(a);const f=t.getProgramParameter(a,t.LINK_STATUS),o=t.getProgramInfoLog(a)||"";return{program:f?a:null,log:o}}function x(t,c){console.error(c),t.bindFramebuffer(t.FRAMEBUFFER,null),t.clearColor(.02,.04,.1,1),t.clear(t.COLOR_BUFFER_BIT)}function X({pixelRatio:t}){const c=h.useRef(null),u=h.useRef(0),a=h.useRef(0),f=h.useRef({x:0,y:0,l:0,r:0});return h.useEffect(()=>{const o=c.current,e=o.getContext("webgl2",{premultipliedAlpha:!1});if(!e)return;let R=!1,n=null,m=null,l=null,d=null,g=!1;const T=i=>{const s=o.getBoundingClientRect(),r=i.clientX-s.left,v=i.clientY-s.top;f.current.x=Math.max(0,Math.min(r,s.width)),f.current.y=Math.max(0,Math.min(s.height-v,s.height))},I=()=>{const i=window.devicePixelRatio||1;return Math.max(1,Math.min(2,t??i))};function M(){if(g=!1,R)return;const i=I(),s=Math.max(1,o.clientWidth|0),r=Math.max(1,o.clientHeight|0),v=Math.max(1,Math.floor(s*i)),p=Math.max(1,Math.floor(r*i));(o.width!==v||o.height!==p)&&(o.width=v,o.height=p,e.viewport(0,0,v,p))}function y(){g||(g=!0,requestAnimationFrame(M))}if(n=e.createVertexArray(),m=e.createBuffer(),!n||!m)return;e.bindVertexArray(n),e.bindBuffer(e.ARRAY_BUFFER,m),e.bufferData(e.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),e.STATIC_DRAW),e.enableVertexAttribArray(0),e.vertexAttribPointer(0,2,e.FLOAT,!1,0,0);const S=()=>{e.deleteVertexArray(n),e.deleteBuffer(m),n=null,m=null},{shader:A,log:G}=H(e,e.VERTEX_SHADER,U);if(!A){x(e,G),S();return}const{shader:E,log:j}=H(e,e.FRAGMENT_SHADER,O);if(!E){x(e,j),e.deleteShader(A),S();return}const _=Y(e,A,E);if(e.deleteShader(A),e.deleteShader(E),!_.program){x(e,_.log),S();return}l=_.program;const L=e.getUniformLocation(l,"iResolution"),C=e.getUniformLocation(l,"iTime"),b=e.getUniformLocation(l,"iFrame"),D=e.getUniformLocation(l,"iMouse");d=new ResizeObserver(y),d.observe(o),y(),o.addEventListener("mousemove",T),u.current=performance.now(),a.current=0;const P=V(o,i=>{if(R||e.isContextLost())return;const s=(i-u.current)/1e3;a.current+=1;try{e.useProgram(l),g&&M();const r=I(),v=o.width,p=o.height;if(L&&e.uniform3f(L,v,p,r),C&&e.uniform1f(C,s),b&&e.uniform1i(b,a.current),D){const w=f.current;e.uniform4f(D,w.x*r,w.y*r,w.l,w.r)}e.bindVertexArray(n),e.drawArrays(e.TRIANGLES,0,3)}catch(r){x(e,r?.message??String(r))}});return()=>{if(R=!0,P(),o.removeEventListener("mousemove",T),d){try{d.disconnect()}catch{}d=null}try{m&&e.deleteBuffer(m)}catch{}try{n&&e.deleteVertexArray(n)}catch{}try{l&&e.deleteProgram(l)}catch{}}},[t]),F.jsx("div",{style:{position:"absolute",inset:0},children:F.jsx("canvas",{ref:c,style:{width:"100%",height:"100%",display:"block"}})})}export{X as GridImpl};

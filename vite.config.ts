@@ -5,6 +5,7 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig(({ command }) => ({
+  base: "/website2/",
   // The server bundle runs as a Cloudflare Worker — there is no node_modules
   // at runtime. Vite's default SSR build leaves npm deps as bare external
   // imports (h3, react, @tanstack/*, seroval, …), which resolve on a Node

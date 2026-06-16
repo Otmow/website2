@@ -46,7 +46,7 @@ async function run() {
   for (const r of routes) {
     console.log(`Fetching page: ${r.path}...`);
     // Create a mock request object. Cloudflare Worker expects standard Request object.
-    const request = new Request(`http://localhost${r.path}`);
+    const request = new Request(`http://localhost/website2${r.path === "/" ? "" : r.path}`);
 
     try {
       const response = await server.fetch(request);
